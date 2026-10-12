@@ -1,15 +1,14 @@
 # Enable the interactive video gallery
 
-The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the `docs/` folder through GitHub Pages.
+The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the `docs/` folder through GitHub Pages. The deployment workflow is committed, but GitHub Pages must first be enabled in repository settings; this workflow does not use a personal access token to change repository settings automatically.
 
 ## One-time repository setting
 
-1. Open [the repository's Settings](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap/settings/pages).
-2. Under **Build and deployment**, choose **GitHub Actions** as the source.
-3. Save the setting if GitHub shows a save button.
-4. Open the [Actions tab](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap/actions) and open **Deploy learning resource site**.
-5. If no run appears yet, use **Run workflow** on the `main` branch. A later push to `docs/` will also trigger deployment.
-6. Wait for the workflow to complete successfully.
+1. Open [the repository's Pages settings](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap/settings/pages).
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**. If the setting offers a save button, save it.
+3. Open the [Actions tab](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap/actions) and choose **Deploy learning resource site**.
+4. Click **Run workflow** for the `main` branch, or push a new change under `docs/` to trigger it.
+5. Wait for the workflow to complete successfully.
 
 ## Open the gallery
 
