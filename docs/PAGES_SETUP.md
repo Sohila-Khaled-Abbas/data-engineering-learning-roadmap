@@ -1,6 +1,6 @@
 # Enable the interactive video gallery
 
-The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the `docs/` folder through GitHub Pages. The deployment workflow is committed, but GitHub Pages must first be enabled in repository settings; this workflow does not use a personal access token to change repository settings automatically.
+The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the `docs/` folder through GitHub Pages. The workflow is committed, but Pages needs one manual repository setting before it can deploy. The previous first-run attempt returned `Get Pages site failed (404)`; using `enablement: true` also returned `Resource not accessible by integration`, so the workflow no longer attempts to change repository-level settings automatically.
 
 ## One-time repository setting
 
