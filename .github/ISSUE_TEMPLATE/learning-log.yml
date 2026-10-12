@@ -1,0 +1,33 @@
+name: Learning log
+description: Record a learning session or a blocker.
+title: "[Learning]: "
+labels:
+  - learning
+body:
+  - type: input
+    id: phase
+    attributes:
+      label: Roadmap phase / skill
+      placeholder: "Phase 1 — Analytical SQL"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What were you trying to learn or build?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link a commit, query, notebook, test, or project artifact.
+    validations:
+      required: false
+  - type: textarea
+    id: blocker
+    attributes:
+      label: Blocker / next action
+    validations:
+      required: false

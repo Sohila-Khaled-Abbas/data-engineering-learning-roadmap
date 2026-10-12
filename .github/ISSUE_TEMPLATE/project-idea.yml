@@ -1,0 +1,32 @@
+name: Project idea
+description: Propose a mini-project that demonstrates one or more skills.
+title: "[Project]: "
+labels:
+  - project
+body:
+  - type: input
+    id: problem
+    attributes:
+      label: Problem / business question
+    validations:
+      required: true
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills to demonstrate
+      description: List the technologies and skills needed.
+    validations:
+      required: true
+  - type: input
+    id: data
+    attributes:
+      label: Data source and license
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Definition of done
+      description: What reproducible evidence will prove the project works?
+    validations:
+      required: true
