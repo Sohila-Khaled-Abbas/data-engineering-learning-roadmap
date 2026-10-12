@@ -1,5 +1,10 @@
 # Data Engineering Learning Roadmap
 
+[![Roadmap](https://img.shields.io/badge/roadmap-skill--first-16a34a?style=for-the-badge)](ROADMAP.md)
+[![Video Library](https://img.shields.io/badge/YouTube-interactive%20video%20library-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
+[![Resource Index](https://img.shields.io/badge/resources-15%20curated%20videos-2563eb?style=for-the-badge)](data/video-resources.csv)
+[![GitHub](https://img.shields.io/badge/GitHub-open%20repository-181717?style=for-the-badge&logo=github)](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap)
+
 A practical, self-paced path from data fundamentals to analytics engineering and data pipelines. Learn in a simple order, build something at every stage, and keep proof of your work in GitHub.
 
 > **The guiding rule:** learn the core skills first. Explore specialized and legacy platforms only after you understand the underlying data concepts or when a target role actually requires them.
@@ -26,7 +31,7 @@ The recommended order avoids studying many tools that solve similar problems at 
 
 1. Follow [`ROADMAP.md`](ROADMAP.md) in order. The phase timeboxes are suggestions, not deadlines.
 2. Use [`docs/SKILL_MAP.md`](docs/SKILL_MAP.md) to see the skills and technologies grouped by priority.
-3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md). Curated video playlists are grouped by phase; the structured index is [`data/video-resources.csv`](data/video-resources.csv). Prefer hands-on practice over collecting courses.
+3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md), or open the [interactive YouTube video gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for searchable playlist and lesson previews. Curated playlists are grouped by phase; the structured index is [`data/video-resources.csv`](data/video-resources.csv). Prefer hands-on practice over collecting courses.
 4. Complete at least one deliverable in each phase and record it in your own repository.
 5. Build the capstone using [`docs/CAPSTONE.md`](docs/CAPSTONE.md).
 6. Track each session by adding a short learning note or GitHub issue; use [`docs/ADD_VIDEO_RESOURCES.md`](docs/ADD_VIDEO_RESOURCES.md) to maintain the resource catalog.
