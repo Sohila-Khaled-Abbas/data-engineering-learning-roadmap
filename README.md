@@ -84,15 +84,19 @@ The responsive gallery includes lazy-loaded playlist/video iframes, search, phas
 ├── README.md
 ├── ROADMAP.md
 ├── CONTRIBUTING.md
+├── scripts/
+│   └── build_site.py
 ├── data/
 │   ├── learning-roadmap.csv
 │   ├── technology-map.csv
 │   ├── video-resources.csv
 │   └── roadmap-references.csv
+├── templates/
 └── docs/
     ├── index.html
     ├── VIDEO_LIBRARY.html
     ├── PAGES_SETUP.md
+    ├── LEARNING_MATERIALS.md
     ├── REFERENCE_ROADMAPS.md
     ├── SKILL_MAP.md
     ├── RESOURCES.md
@@ -104,7 +108,7 @@ The responsive gallery includes lazy-loaded playlist/video iframes, search, phas
 
 ## GitHub Pages and local setup
 
-This repository is already published. To work locally, clone it with Git; to update the video gallery, edit `docs/VIDEO_LIBRARY.html` and push to `main`. The workflow deploys the `docs/` folder to GitHub Pages once **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**. See [`docs/PAGES_SETUP.md`](docs/PAGES_SETUP.md) for the one-time configuration steps.
+The Pages workflow now builds a full static documentation site from the root README/roadmap, all Markdown files under `docs/` and `templates/`, the resource CSVs, and the interactive video gallery. It generates `_site/` and deploys that folder once **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**. See [`docs/PAGES_SETUP.md`](docs/PAGES_SETUP.md) for the one-time configuration steps.
 
 ## Start here
 
