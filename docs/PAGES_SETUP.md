@@ -1,6 +1,6 @@
 # Enable the interactive video gallery
 
-The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the `docs/` folder through GitHub Pages. The workflow is committed, but Pages needs one manual repository setting before it can deploy. The previous first-run attempt returned `Get Pages site failed (404)`; using `enablement: true` also returned `Resource not accessible by integration`, so the workflow no longer attempts to change repository-level settings automatically.
+The resource list is readable directly in GitHub. To use embedded YouTube players, search/filter controls, and the full responsive gallery, publish the generated `_site/` folder through GitHub Pages. The build now converts all root/documentation/template Markdown files into styled HTML pages and copies the resource CSV indexes and video gallery. The workflow is committed, but Pages needs one manual repository setting before it can deploy. The previous first-run attempt returned `Get Pages site failed (404)`; using `enablement: true` also returned `Resource not accessible by integration`, so the workflow no longer attempts to change repository-level settings automatically.
 
 ## One-time repository setting
 
