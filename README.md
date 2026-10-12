@@ -69,10 +69,17 @@ A topic is complete when you can:
 
 **Electives:** Oracle PL/SQL, MongoDB, Scala, Kafka in depth, Hadoop/HDFS, Hive/Impala, HBase, Pig, DataStage, Informatica PowerCenter, SAP BusinessObjects Web Intelligence/Universe, and Incorta. Some are specialized, enterprise-licensed, or legacy technologies. Learn their concepts and seek a suitable lab when required, but do not let tool access block the core path.
 
-## Repository structure
+## Video library and repository structure
+
+[![Interactive YouTube Gallery](https://img.shields.io/badge/open-YouTube%20video%20gallery-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
+
+The responsive gallery includes lazy-loaded playlist/video iframes, search, phase filters, and direct YouTube links. To enable the hosted preview the first time, follow [GitHub Pages setup](docs/PAGES_SETUP.md).
 
 ```text
 .
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml
 ├── README.md
 ├── ROADMAP.md
 ├── CONTRIBUTING.md
@@ -81,6 +88,9 @@ A topic is complete when you can:
 │   ├── technology-map.csv
 │   └── video-resources.csv
 └── docs/
+    ├── index.html
+    ├── VIDEO_LIBRARY.html
+    ├── PAGES_SETUP.md
     ├── SKILL_MAP.md
     ├── RESOURCES.md
     ├── ADD_VIDEO_RESOURCES.md
@@ -89,9 +99,9 @@ A topic is complete when you can:
     └── PUBLISH_TO_GITHUB.md
 ```
 
-## Publish it to GitHub
+## GitHub Pages and local setup
 
-Follow [`docs/PUBLISH_TO_GITHUB.md`](docs/PUBLISH_TO_GITHUB.md) to create a repository named `data-engineering-learning-roadmap` and push these files.
+This repository is already published. To work locally, clone it with Git; to update the video gallery, edit `docs/VIDEO_LIBRARY.html` and push to `main`. The workflow deploys the `docs/` folder to GitHub Pages once **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**. See [`docs/PAGES_SETUP.md`](docs/PAGES_SETUP.md) for the one-time configuration steps.
 
 ## Start here
 
