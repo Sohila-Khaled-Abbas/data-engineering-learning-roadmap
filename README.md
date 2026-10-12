@@ -26,10 +26,10 @@ The recommended order avoids studying many tools that solve similar problems at 
 
 1. Follow [`ROADMAP.md`](ROADMAP.md) in order. The phase timeboxes are suggestions, not deadlines.
 2. Use [`docs/SKILL_MAP.md`](docs/SKILL_MAP.md) to see the skills and technologies grouped by priority.
-3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md). Prefer official documentation and hands-on practice over collecting courses.
+3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md). Curated video playlists are grouped by phase; the structured index is [`data/video-resources.csv`](data/video-resources.csv). Prefer hands-on practice over collecting courses.
 4. Complete at least one deliverable in each phase and record it in your own repository.
 5. Build the capstone using [`docs/CAPSTONE.md`](docs/CAPSTONE.md).
-6. Track each session with [`templates/LEARNING_NOTE.md`](templates/LEARNING_NOTE.md) and review progress using [`templates/WEEKLY_REVIEW.md`](templates/WEEKLY_REVIEW.md).
+6. Track each session by adding a short learning note or GitHub issue; use [`docs/ADD_VIDEO_RESOURCES.md`](docs/ADD_VIDEO_RESOURCES.md) to maintain the resource catalog.
 
 ## Suggested pacing
 
@@ -71,23 +71,17 @@ A topic is complete when you can:
 ├── README.md
 ├── ROADMAP.md
 ├── CONTRIBUTING.md
-├── LICENSE
 ├── data/
 │   ├── learning-roadmap.csv
-│   └── technology-map.csv
-├── docs/
-│   ├── SKILL_MAP.md
-│   ├── RESOURCES.md
-│   ├── PROJECTS.md
-│   ├── CAPSTONE.md
-│   └── CERTIFICATIONS.md
-├── templates/
-│   ├── LEARNING_NOTE.md
-│   ├── WEEKLY_REVIEW.md
-│   └── PROJECT_README.md
-└── .github/ISSUE_TEMPLATE/
-    ├── learning-log.yml
-    └── project-idea.yml
+│   ├── technology-map.csv
+│   └── video-resources.csv
+└── docs/
+    ├── SKILL_MAP.md
+    ├── RESOURCES.md
+    ├── ADD_VIDEO_RESOURCES.md
+    ├── PROJECTS.md
+    ├── CAPSTONE.md
+    └── PUBLISH_TO_GITHUB.md
 ```
 
 ## Publish it to GitHub
@@ -96,4 +90,4 @@ Follow [`docs/PUBLISH_TO_GITHUB.md`](docs/PUBLISH_TO_GITHUB.md) to create a repo
 
 ## Start here
 
-Open [`ROADMAP.md`](ROADMAP.md), begin with Phase 0, and commit your first evidence. Keep the process practical: fewer tools, more finished work.
+Open [`ROADMAP.md`](ROADMAP.md), begin with Phase 0, and commit your first evidence. Use [`data/video-resources.csv`](data/video-resources.csv) to match video resources to phases. Keep the process practical: fewer tools, more finished work.

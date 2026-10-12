@@ -2,6 +2,20 @@
 
 The route below is ordered by dependency: fundamentals first, then analytics, pipelines, engineering practices, distributed systems, electives, and a capstone.
 
+## Quick video resource map
+
+Use the playlists as support material, not as a replacement for labs. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv).
+
+| Phase | Recommended video resources |
+|---|---|
+| 0 — Workspace and fundamentals | [Network Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFycCObiCfCeYJx_lZJl7iPc), [Operating Systems Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFwsFOnu-XqhemUHeWrPglU7), [Linux for Data Engineers](https://youtu.be/gojeTqXdBH0) |
+| 1 — SQL and databases | [Database Fundamentals](https://www.youtube.com/playlist?list=PLO63i1is_Z_A), [Relational Model](https://youtu.be/JyCknfVW5uM) |
+| 2 — Programming and Python | [Programming Fundamentals](https://www.youtube.com/playlist?list=PLPJ4DGyaHe1hxIQGFXxt-9_0PZzFXtkPM), then [Python for Data Work](https://www.youtube.com/playlist?list=PLNFDrRZdysFzSkNWqHZof7NxFHtGNC6bf) |
+| 6 — Pipelines and orchestration | [Shell Scripting](https://www.youtube.com/playlist?list=PLNFDrRZdysFyANzEXxzztUlGiCDxZs4Kp) |
+| 7 — Engineering and deployment | [Docker Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFxkEsOLeJYBSisFAB65vbXe); optional [Linux Administration I](https://www.youtube.com/playlist?list=PLNFDrRZdysFwIftRRR9GM5ui5oM7HoqVA) and [II](https://www.youtube.com/playlist?list=PLNFDrRZdysFyJSwqdEdZi_7S0r-JlVe3H) |
+| 8 — Big data | [Hadoop and Big Data Engineering](https://www.youtube.com/playlist?list=PLrooD4hY1QqAK5pbBpcthLuMa-cXnXJLE) |
+| 9 — Electives | Optional [Java Programming](https://www.youtube.com/playlist?list=PLNFDrRZdysFwoPGmJdV6GwnuDhoKg8Svw) and [MongoDB Fundamentals](https://www.youtube.com/playlist?list=PLesfn4TAj57XGGSmVzzpxY69-lha1EWEI) |
+
 ## Phase 0 — Prepare your workspace
 
 **Suggested time:** 1 week  
