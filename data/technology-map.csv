@@ -1,0 +1,37 @@
+Skill Area,Technologies / Tools,Priority,Skills to Practice,Target Outcome
+Networking and OS basics,PowerShell; Linux/WSL; curl; DNS tools,Core,HTTP/HTTPS; ports; process/file basics; simple troubleshooting,Understand how a client reaches an API/database
+Version control,Git; GitHub,Core,Commits; branches; pull requests; documentation,Maintain project history and collaborate
+Relational databases,PostgreSQL or SQL Server,Core,Tables; keys; constraints; transactions; query grain,Build and explain a sound relational schema
+Analytical SQL,SQL; CTEs; window functions,Core,Joins; aggregation; ranking; deduplication; dates/NULLs,Answer business questions with testable SQL
+SQL performance,Query plans; indexes; EXPLAIN,Core,Execution plans; statistics; SARGability; measurement,"Demonstrate one measured, correct optimization"
+Python programming,Python 3; VS Code/Jupyter,Core,Functions; data structures; files; exceptions; modules,Write maintainable scripts with clear errors
+Data transformation,pandas; requests; SQLAlchemy,Core,CSV/JSON/Parquet; API ingestion; schema and type handling,Build a repeatable ETL script
+Testing,pytest; assertions,Core,Unit tests; edge cases; data checks,"Test valid, empty, malformed inputs"
+Data profiling and statistics,pandas; notebooks; Matplotlib; spreadsheet,Core,Missingness; duplicates; distributions; uncertainty,Communicate quality and analytical findings
+Dimensional modeling,SQL; diagrams.net/dbdiagram.io,Core,Grain; facts/dimensions; keys; SCD; lineage,Build a documented star schema
+Business intelligence,Power BI; Power Query; DAX,Core for BI roles,Modeling; measures; filter context; accessible visuals,Deliver a report with reconciled KPIs
+Visualization alternative,Tableau,Elective,Calculated fields; filters; dashboard actions,Build a story-driven dashboard
+Data APIs,REST; JSON; Python requests,Core,Pagination; status codes; retries; credentials,Ingest API data safely and reproducibly
+Orchestration,Apache Airflow,Core,DAGs; scheduling; dependencies; retries; backfills; logs,Automate pipeline dependencies and recovery
+Shell automation,Bash; PowerShell; ShellCheck,Core,Pipes; exit codes; redirection; scheduling; logs,Create safe rerunnable scripts
+CI/CD,GitHub Actions; YAML,Core,Automated tests; checks; artifacts; secrets,Run checks on pushes and pull requests
+Containerization,Docker; Docker Compose,Core,Images; volumes; networking; environment configuration,Make a project repeatable on another machine
+Cloud foundations,AWS; Azure; Microsoft Fabric,Role-dependent,Storage/compute; IAM; monitoring; cost/security,Design a cloud architecture and explain trade-offs
+Distributed processing,Spark; PySpark; Spark SQL,Core after foundations,DataFrames; lazy evaluation; partitions; shuffle,Build and validate a batch processing job
+Streaming,Kafka,Elective until justified,Topics; partitions; offsets; producer/consumer; event contracts,Create a small event producer/consumer or explain its fit
+Distributed storage,Hadoop; HDFS,Elective / conceptual first,Blocks; replication; data locality; failure handling,Explain distributed storage and processing choices
+SQL on big data,Hive; Impala; Parquet/ORC,Elective,Partitioning; columnar formats; scan/query planning,Query partitioned analytical data
+Wide-column databases,HBase,Elective,Row-key design; column families; access patterns,Design for reads/writes rather than normalized joins
+Data-flow scripting,Apache Pig,Legacy elective,LOAD/FILTER/GROUP/JOIN/STORE; pipeline transformations,Explain or translate a Pig flow to SQL/PySpark
+Document database,MongoDB,Elective,Documents; CRUD; aggregation; indexes; embed vs reference,Build a document model and aggregation query
+Oracle procedural SQL,Oracle SQL; PL/SQL; SQL Developer/Live SQL,Elective,Packages; procedures/functions; cursors; exceptions,Write tested PL/SQL business logic
+JVM programming,Java SE; OOP; JUnit; Maven,Elective,Classes/interfaces; collections; exceptions; tests,Build a tested file parser or data utility
+Functional/JVM data programming,Scala,Elective,Collections; immutable transformations; pattern matching,Transform and validate sample records
+Enterprise ETL,IBM DataStage,Licensed/specialized,Stages; mappings; parameters; parallelism; logs,Map a source-to-target ETL job
+Enterprise ETL,Informatica PowerCenter,Licensed/specialized,Mappings; transformations; sessions; workflows; rejects,Design a robust ETL workflow
+Enterprise semantic reporting,SAP BusinessObjects Web Intelligence/Universe,Licensed/specialized,Semantic layer; dimensions/measures; ad-hoc reporting,Design metric semantics and report validation
+Analytics platform,Incorta,Access-dependent,Ingestion; schema mapping; analytics model; reporting,Map a source-to-dashboard flow
+Data governance,Data dictionary; lineage; Microsoft Purview concepts,Core concepts,Ownership; classification; lineage; access; quality,Document where data comes from and how it should be used
+Agile delivery,GitHub Projects; Scrum concepts,Core practice,Backlog; user stories; acceptance criteria; review/retro,"Deliver work in small, reviewable increments"
+Financial data context,Excel/Sheets; Power BI,Business elective,Revenue/cost/margin; KPI numerator/denominator; reconciliation,Create a finance KPI dictionary and reconcile metrics
+Communication and presentation,Markdown; slides; issue tracker,Core practice,Technical writing; demo; meeting notes; stakeholder updates,"Present the problem, evidence, caveats and next steps"
