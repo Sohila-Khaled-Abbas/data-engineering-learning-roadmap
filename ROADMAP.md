@@ -4,12 +4,12 @@ The route below is ordered by dependency: fundamentals first, then analytics, pi
 
 ## Quick video resource map
 
-Use the playlists as support material, not as a replacement for labs. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv).
+Use the playlists as support material, not as a replacement for labs. Open the [interactive YouTube gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for lazy-loaded playlist/video previews and search/filter controls. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv).
 
 | Phase | Recommended video resources |
 |---|---|
 | 0 — Workspace and fundamentals | [Network Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFycCObiCfCeYJx_lZJl7iPc), [Operating Systems Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFwsFOnu-XqhemUHeWrPglU7), [Linux for Data Engineers](https://youtu.be/gojeTqXdBH0) |
-| 1 — SQL and databases | [Database Fundamentals](https://www.youtube.com/playlist?list=PLO63i1is_Z_A), [Relational Model](https://youtu.be/JyCknfVW5uM) |
+| 1 — SQL and databases | [Database Fundamentals](https://www.youtube.com/playlist?list=PLO63i1is_Z_A), [Relational Model](https://youtu.be/JyCknfVW5uM), [SQL Server Fundamentals — بشمهندس رامي](https://www.youtube.com/playlist?list=PLoRh0POuk1Rw-BZU-DPI6cA_c5W9_2uF_) |
 | 2 — Programming and Python | [Programming Fundamentals](https://www.youtube.com/playlist?list=PLPJ4DGyaHe1hxIQGFXxt-9_0PZzFXtkPM), then [Python for Data Work](https://www.youtube.com/playlist?list=PLNFDrRZdysFzSkNWqHZof7NxFHtGNC6bf) |
 | 6 — Pipelines and orchestration | [Shell Scripting](https://www.youtube.com/playlist?list=PLNFDrRZdysFyANzEXxzztUlGiCDxZs4Kp) |
 | 7 — Engineering and deployment | [Docker Fundamentals](https://www.youtube.com/playlist?list=PLNFDrRZdysFxkEsOLeJYBSisFAB65vbXe); optional [Linux Administration I](https://www.youtube.com/playlist?list=PLNFDrRZdysFwIftRRR9GM5ui5oM7HoqVA) and [II](https://www.youtube.com/playlist?list=PLNFDrRZdysFyJSwqdEdZi_7S0r-JlVe3H) |
