@@ -32,7 +32,7 @@ The recommended order avoids studying many tools that solve similar problems at 
 
 1. Follow [`ROADMAP.md`](ROADMAP.md) in order. The phase timeboxes are suggestions, not deadlines.
 2. Use [`docs/SKILL_MAP.md`](docs/SKILL_MAP.md) to see the skills and technologies grouped by priority.
-3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md), or open the [interactive YouTube video gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for searchable playlist and lesson previews. Curated playlists are grouped by phase; the structured index is [`data/video-resources.csv`](data/video-resources.csv). Prefer hands-on practice over collecting courses.
+3. Select resources from [`docs/RESOURCES.md`](docs/RESOURCES.md), or open the [interactive YouTube video gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for searchable playlist and lesson previews. Browse additional communities and roadmap examples in [`docs/REFERENCE_ROADMAPS.md`](docs/REFERENCE_ROADMAPS.md), indexed in [`data/roadmap-references.csv`](data/roadmap-references.csv). Curated videos are grouped by phase in [`data/video-resources.csv`](data/video-resources.csv). Prefer hands-on practice over collecting courses.
 4. Complete at least one deliverable in each phase and record it in your own repository.
 5. Build the capstone using [`docs/CAPSTONE.md`](docs/CAPSTONE.md).
 6. Track each session by adding a short learning note or GitHub issue; use [`docs/ADD_VIDEO_RESOURCES.md`](docs/ADD_VIDEO_RESOURCES.md) to maintain the resource catalog.
@@ -87,11 +87,13 @@ The responsive gallery includes lazy-loaded playlist/video iframes, search, phas
 ├── data/
 │   ├── learning-roadmap.csv
 │   ├── technology-map.csv
-│   └── video-resources.csv
+│   ├── video-resources.csv
+│   └── roadmap-references.csv
 └── docs/
     ├── index.html
     ├── VIDEO_LIBRARY.html
     ├── PAGES_SETUP.md
+    ├── REFERENCE_ROADMAPS.md
     ├── SKILL_MAP.md
     ├── RESOURCES.md
     ├── ADD_VIDEO_RESOURCES.md
