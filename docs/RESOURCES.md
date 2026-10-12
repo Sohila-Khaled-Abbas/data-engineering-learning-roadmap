@@ -2,14 +2,21 @@
 
 Start with free, official documentation and focused practice. A paid course is optional; the deliverables are not.
 
-[![Curated videos](https://img.shields.io/badge/video_library-15_resources-red?style=for-the-badge&logo=youtube)](../data/video-resources.csv)
+[![Curated videos](https://img.shields.io/badge/video_library-16_resources-red?style=for-the-badge&logo=youtube)](../data/video-resources.csv)
 [![Step-by-step roadmap](https://img.shields.io/badge/learning_order-step_by_step-2563eb?style=for-the-badge)](../ROADMAP.md)
 
 > **Interactive previews:** [Open the HTML video gallery](VIDEO_LIBRARY.html). The gallery uses YouTube iframes for playlists and individual lessons. GitHub sanitizes iframe embeds in Markdown, so the interactive gallery must be served by GitHub Pages to render as a player. See [`PAGES_SETUP.md`](PAGES_SETUP.md) for the one-time GitHub Pages setting.
 
+[![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
+
 ## Curated video playlists and lessons
 
 These community video resources are organized by the phase where they are most useful. They supplement the step-by-step roadmap; they do not replace coding, SQL practice, lab work, or project evidence. The full machine-readable index is [`data/video-resources.csv`](../data/video-resources.csv).
+
+### Roadmap-wide overview
+
+- [Data Engineering Roadmap — Overview Playlist](https://www.youtube.com/playlist?list=PLYkGz4lY93PVQFa1nQRy8lergfAMRevdO) — use as a broad walkthrough; watch the relevant videos alongside each phase rather than treating the playlist as a separate course to binge.
+- [Companion roadmaps and references](REFERENCE_ROADMAPS.md) — external GitHub roadmaps, visual maps, an interactive roadmap site, a social post, and shared Notion/Gemini links. Links that could not be independently verified are labelled so.
 
 ### 1. Start with the environment and fundamentals — Phase 0
 
