@@ -5,6 +5,7 @@
 [![Resource Index](https://img.shields.io/badge/resources-16%20curated%20videos-2563eb?style=for-the-badge)](data/video-resources.csv)
 [![Companion Roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](docs/REFERENCE_ROADMAPS.md)
 [![GitHub](https://img.shields.io/badge/GitHub-open%20repository-181717?style=for-the-badge&logo=github)](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap)
+[![Full Docs Site](https://img.shields.io/badge/site-all%20docs%20published-0f766e?style=for-the-badge)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/)
 
 A practical, self-paced path from data fundamentals to analytics engineering and data pipelines. Learn in a simple order, build something at every stage, and keep proof of your work in GitHub.
 
@@ -70,11 +71,11 @@ A topic is complete when you can:
 
 **Electives:** Oracle PL/SQL, MongoDB, Scala, Kafka in depth, Hadoop/HDFS, Hive/Impala, HBase, Pig, DataStage, Informatica PowerCenter, SAP BusinessObjects Web Intelligence/Universe, and Incorta. Some are specialized, enterprise-licensed, or legacy technologies. Learn their concepts and seek a suitable lab when required, but do not let tool access block the core path.
 
-## Video library and repository structure
+## Full documentation site and repository structure
 
 [![Interactive YouTube Gallery](https://img.shields.io/badge/open-YouTube%20video%20gallery-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
 
-The responsive gallery includes lazy-loaded playlist/video iframes, search, phase filters, and direct YouTube links. To enable the hosted preview the first time, follow [GitHub Pages setup](docs/PAGES_SETUP.md).
+The [full documentation site](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/) publishes the root README, step-by-step roadmap, all Markdown documentation and templates as styled HTML pages, data CSV downloads, the PDF source-links page, and the responsive YouTube gallery. The gallery includes lazy-loaded playlist/video iframes, search, phase filters, and direct YouTube links. Deployment is managed by GitHub Actions; see [GitHub Pages setup](docs/PAGES_SETUP.md) if you need to configure the repository.
 
 ```text
 .
