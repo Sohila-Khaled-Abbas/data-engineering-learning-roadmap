@@ -2,7 +2,8 @@
 
 [![Roadmap](https://img.shields.io/badge/roadmap-skill--first-16a34a?style=for-the-badge)](ROADMAP.md)
 [![Video Library](https://img.shields.io/badge/YouTube-interactive%20video%20library-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
-[![Resource Index](https://img.shields.io/badge/resources-15%20curated%20videos-2563eb?style=for-the-badge)](data/video-resources.csv)
+[![Resource Index](https://img.shields.io/badge/resources-16%20curated%20videos-2563eb?style=for-the-badge)](data/video-resources.csv)
+[![Companion Roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](docs/REFERENCE_ROADMAPS.md)
 [![GitHub](https://img.shields.io/badge/GitHub-open%20repository-181717?style=for-the-badge&logo=github)](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap)
 
 A practical, self-paced path from data fundamentals to analytics engineering and data pipelines. Learn in a simple order, build something at every stage, and keep proof of your work in GitHub.
