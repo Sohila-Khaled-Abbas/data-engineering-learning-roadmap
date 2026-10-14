@@ -100,17 +100,14 @@ def site_url(path: str) -> str:
 
 def page_shell(title: str, body: str, current: str = "") -> str:
     current_path = Path(current).with_suffix(".html").as_posix() if current else ""
-    nav = "".join(
-        f'<a class="{"active" if current_path == url else ""}" href="{site_url(url)}"'
-        f'{" aria-current=\"page\"" if current_path == url else ""}>{html.escape(label)}</a>'
-        for label, url in NAV_ITEMS
-    )
+    def nav_link(label: str, url: str) -> str:
+        active = current_path == url
+        active_class = "active" if active else ""
+        aria_current = ' aria-current="page"' if active else ""
+        return f'<a class="{active_class}" href="{site_url(url)}"{aria_current}>{html.escape(label)}</a>'
+    nav = "".join(nav_link(label, url) for label, url in NAV_ITEMS)
     more_active = current_path in {url for _, url in MORE_NAV_ITEMS}
-    more_links = "".join(
-        f'<a class="{"active" if current_path == url else ""}" href="{site_url(url)}"'
-        f'{" aria-current=\"page\"" if current_path == url else ""}>{html.escape(label)}</a>'
-        for label, url in MORE_NAV_ITEMS
-    )
+    more_links = "".join(nav_link(label, url) for label, url in MORE_NAV_ITEMS)
     sidebar = "".join(f'<a href="{site_url(Path(src).with_suffix(".html").as_posix())}">{html.escape(label)}</a>' for src, label in DOCS)
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
