@@ -122,11 +122,11 @@ def page_shell(title: str, body: str, current: str = "") -> str:
 <footer><div class="shell">A practical learning guide. External tools and resources may change; verify access, licensing, and version-specific instructions on their official sites.
 <div class="file-links" style="margin-top:10px"><a class="file-link" href="{site_url('README.html')}">Repository README</a><a class="file-link" href="{site_url('data/community-learning-resources.csv')}">Download community CSV</a><a class="file-link" href="{site_url('data/video-resources.csv')}">Download video index CSV</a><a class="file-link" href="{site_url('data/roadmap-references.csv')}">Download references CSV</a><a class="file-link" href="https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></div></div></footer>
 <script>
-document.addEventListener("click", function(event) {
-  document.querySelectorAll(".nav-more[open]").forEach(function(menu) {
+document.addEventListener("click", function(event) {{
+  document.querySelectorAll(".nav-more[open]").forEach(function(menu) {{
     if (!menu.contains(event.target)) menu.removeAttribute("open");
-  });
-});
+  }});
+}});
 </script>
 </body></html>"""
 
@@ -393,7 +393,7 @@ def create_community_resource_section() -> str:
   <div class="empty-state" id="community-resource-empty">No resources match those filters. Clear the search or choose “All phases” and “All types”.</div>
 </section>
 <script>
-(function () {
+(function () {{
   var search = document.getElementById("community-search");
   var phase = document.getElementById("community-phase-filter");
   var type = document.getElementById("community-type-filter");
@@ -401,35 +401,35 @@ def create_community_resource_section() -> str:
   var count = document.getElementById("community-resource-count");
   var empty = document.getElementById("community-resource-empty");
   if (!search || !phase || !type || !count || !empty) return;
-  function refresh() {
+  function refresh() {{
     var term = search.value.trim().toLowerCase();
     var wantedPhase = phase.value;
     var wantedType = type.value;
     var visible = 0;
-    cards.forEach(function (card) {
+    cards.forEach(function (card) {{
       var textMatch = !term || card.getAttribute("data-search").indexOf(term) !== -1;
       var phaseMatch = wantedPhase === "all" || card.getAttribute("data-phase") === wantedPhase;
       var typeMatch = wantedType === "all" || card.getAttribute("data-type") === wantedType;
       var show = textMatch && phaseMatch && typeMatch;
       card.hidden = !show;
       if (show) visible++;
-    });
+    }});
     count.textContent = "Showing " + visible + " of " + cards.length + " community resources";
     empty.style.display = visible ? "none" : "block";
-  }
+  }}
   search.addEventListener("input", refresh);
   phase.addEventListener("change", refresh);
   type.addEventListener("change", refresh);
-  document.querySelectorAll("#community-resource-grid .preview-trigger").forEach(function (button) {
-    button.addEventListener("click", function () {
+  document.querySelectorAll("#community-resource-grid .preview-trigger").forEach(function (button) {{
+    button.addEventListener("click", function () {{
       var card = button.closest(".resource-card");
       var preview = card.querySelector(".inline-preview");
-      if (preview) {
+      if (preview) {{
         preview.remove();
         button.setAttribute("aria-expanded", "false");
         button.textContent = "Preview here ▶";
         return;
-      }
+      }}
       var frameBox = document.createElement("div");
       frameBox.className = "inline-preview";
       var frame = document.createElement("iframe");
@@ -444,10 +444,10 @@ def create_community_resource_section() -> str:
       actions.parentNode.insertBefore(frameBox, actions);
       button.setAttribute("aria-expanded", "true");
       button.textContent = "Hide preview ✕";
-    });
-  });
+    }});
+  }});
   refresh();
-})();
+}})();
 </script>
 """
 
