@@ -75,7 +75,7 @@ A topic is complete when you can:
 
 [![Interactive YouTube Gallery](https://img.shields.io/badge/open-YouTube%20video%20gallery-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
 
-The [full documentation site](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/) publishes the root README, step-by-step roadmap, all Markdown documentation and templates as styled HTML pages, data CSV downloads, the PDF source-links page, and the responsive YouTube gallery. The gallery includes lazy-loaded playlist/video iframes, search, phase filters, and direct YouTube links. Deployment is managed by GitHub Actions; see [GitHub Pages setup](docs/PAGES_SETUP.md) if you need to configure the repository.
+The [full documentation site](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/) publishes the root README, step-by-step roadmap, all Markdown documentation and templates as styled HTML pages, searchable resource cards, data CSV downloads, the PDF source-links page, and the responsive YouTube gallery. Browse the [Resource Explorer](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/learning-resources.html), [Community Learning Resources guide](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/docs/COMMUNITY_RESOURCES.html), and full [100-item community resource CSV](data/community-learning-resources.csv). The gallery includes lazy-loaded playlist/video iframes, search, phase filters, and direct YouTube links. Deployment is managed by GitHub Actions; see [GitHub Pages setup](docs/PAGES_SETUP.md) if you need to configure the repository.
 
 ```text
 .
@@ -91,6 +91,7 @@ The [full documentation site](https://sohila-khaled-abbas.github.io/data-enginee
 │   ├── learning-roadmap.csv
 │   ├── technology-map.csv
 │   ├── video-resources.csv
+│   ├── community-learning-resources.csv
 │   └── roadmap-references.csv
 ├── templates/
 └── docs/
@@ -98,6 +99,7 @@ The [full documentation site](https://sohila-khaled-abbas.github.io/data-enginee
     ├── VIDEO_LIBRARY.html
     ├── PAGES_SETUP.md
     ├── LEARNING_MATERIALS.md
+    ├── COMMUNITY_RESOURCES.md
     ├── REFERENCE_ROADMAPS.md
     ├── SKILL_MAP.md
     ├── RESOURCES.md
