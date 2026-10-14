@@ -7,7 +7,7 @@ Start with free, official documentation and focused practice. A paid course is o
 
 > **Interactive previews:** [Open the HTML video gallery](VIDEO_LIBRARY.html). The gallery uses YouTube iframes for playlists and individual lessons. GitHub sanitizes iframe embeds in Markdown, so the interactive gallery must be served by GitHub Pages to render as a player. See [`PAGES_SETUP.md`](PAGES_SETUP.md) for the one-time GitHub Pages setting.
 
-[![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
+[![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-11_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
 
 [![Community learning catalog](https://img.shields.io/badge/community_catalog-100%20resources-2563eb?style=for-the-badge)](../data/community-learning-resources.csv)
 [![Resource Explorer](https://img.shields.io/badge/open-resource%20explorer-0f766e?style=for-the-badge)](../learning-resources.html)
