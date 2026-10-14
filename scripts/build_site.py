@@ -35,21 +35,24 @@ EXTENSIONS = ["tables", "fenced_code", "toc", "attr_list", "md_in_html", "sane_l
 
 STYLE = r"""
 :root{color-scheme:light;--bg:#f4f7fb;--surface:#fff;--text:#122033;--muted:#596a80;--line:#dce4ef;--blue:#165dca;--navy:#10213c;--soft:#eaf2ff;--green:#13795b;--shadow:0 16px 38px rgba(18,32,51,.07)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#0b3e91}header{background:linear-gradient(120deg,#0d1e37,#173d6c);color:#fff}.shell{width:min(1200px,calc(100% - 32px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;flex-wrap:wrap}.brand{color:#fff;font-weight:850;letter-spacing:.05em;text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{color:#eaf2ff;text-decoration:none;border:1px solid #ffffff42;border-radius:999px;padding:6px 11px;font-size:.9rem}.nav a:hover{background:#ffffff18}.hero{padding:25px 0 42px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#9dd8ff;font-weight:900}.hero h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.12;letter-spacing:-.04em;margin:.4em 0}.hero p{max-width:820px;color:#d8e6fa;font-size:1.08rem}.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #d5e3f5;background:#f5f9ff;color:#173e75;border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:850}.hero .badge{background:#183e69;color:#e5f2ff;border-color:#ffffff35}.page{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;padding:28px 0 56px}.sidebar{align-self:start;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow)}.sidebar h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 9px}.sidebar a{display:block;text-decoration:none;color:#22364e;padding:6px 8px;border-radius:8px;font-size:.91rem}.sidebar a:hover{background:var(--soft)}main{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,42px);box-shadow:var(--shadow)}main h1{line-height:1.16;letter-spacing:-.035em;font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:0}main h2{margin-top:1.9em;padding-bottom:.35em;border-bottom:1px solid var(--line);line-height:1.3}main h3{margin-top:1.5em;line-height:1.4}main h4{margin-top:1.4em}p,li{overflow-wrap:anywhere}img{max-width:100%;height:auto;border-radius:10px}blockquote{border-left:4px solid #79aef9;background:#f1f6ff;margin:1.4em 0;padding:.8em 1.2em;color:#324963;border-radius:0 10px 10px 0}pre{overflow:auto;background:#101d31;color:#e8f1ff;padding:16px;border-radius:12px;font-size:.9rem}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#edf2fa;padding:.12em .32em;border-radius:5px;font-size:.92em}pre code{background:transparent;padding:0;color:inherit}table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;font-size:.93rem}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:#eef4fc;font-weight:850}tr:nth-child(even) td{background:#fafcff}hr{border:0;border-top:1px solid var(--line);margin:2em 0}.toc{background:#f6f9fe;border:1px solid var(--line);border-radius:12px;padding:12px 16px}footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 36px;font-size:.9rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px #12203308}.card:hover{border-color:#8db9f7;box-shadow:var(--shadow);transform:translateY(-1px)}.card h2{border:0;margin:0 0 7px;padding:0;font-size:1.08rem}.card p{margin:.2em 0;color:var(--muted);font-size:.93rem}.section-label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900;margin:28px 0 12px}.callout{border:1px solid #bcd5fa;border-left:4px solid var(--blue);border-radius:10px;padding:13px 16px;background:#f1f7ff}.file-links{display:flex;gap:10px;flex-wrap:wrap}.file-link{display:inline-flex;padding:9px 13px;border:1px solid #bdd3f1;background:#f3f8ff;border-radius:9px;text-decoration:none;font-weight:800}
-.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:13px}.journey-step{display:flex;flex-direction:column;gap:9px;padding:17px;background:linear-gradient(145deg,#fff,#f7faff);border:1px solid var(--line);border-radius:15px;box-shadow:0 7px 22px #16365b08;min-height:194px}.journey-step:before{counter-increment:journey;content:counter(journey,decimal-leading-zero);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900}.journey-step h3{margin:0;font-size:1.05rem;line-height:1.35}.journey-step p{margin:0;color:var(--muted);font-size:.91rem}.journey-link{display:inline-flex;align-items:center;gap:6px;margin-top:auto;font-weight:850;text-decoration:none}.journey-rail{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin:16px 0}.journey-rail span{height:6px;border-radius:99px;background:linear-gradient(90deg,#165dca,#73b0fa)}.home-start{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.home-start .card{height:100%}.filter-panel{display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(2,minmax(160px,.8fr));gap:12px;background:#f7faff;border:1px solid var(--line);border-radius:14px;padding:15px;margin:16px 0}.filter-field label{display:block;font-size:.78rem;font-weight:850;color:var(--muted);margin-bottom:5px}.filter-field input,.filter-field select{width:100%;padding:11px 12px;border:1px solid #c8d6e9;border-radius:9px;background:#fff;color:var(--text);font:inherit}.resource-results{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin:14px 0}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:13px}.resource-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0;box-shadow:0 6px 20px #10213c07}.resource-card[hidden]{display:none}.resource-card h2{border:0;padding:0;margin:0;font-size:1.03rem;line-height:1.4}.resource-card p{margin:0;color:var(--muted);font-size:.91rem}.resource-card .resource-meta{display:flex;gap:6px;flex-wrap:wrap}.resource-tag{display:inline-flex;align-items:center;background:#edf4ff;color:#244875;border:1px solid #d8e7fa;border-radius:999px;padding:3px 8px;font-size:.73rem;font-weight:850}.resource-tag.priority{background:#e8f8ee;border-color:#c2ecd1;color:#176645}.resource-tag.optional{background:#fff7e6;border-color:#f2dfb4;color:#80520c}.resource-card details{border-top:1px solid var(--line);padding-top:9px;font-size:.85rem;color:var(--muted)}.resource-card summary{cursor:pointer;font-weight:800;color:#284b77}.resource-action{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.resource-action a{font-weight:850;text-decoration:none}.preview-trigger{font:inherit;font-size:.86rem;font-weight:850;color:#164c91;border:1px solid #bdd3f1;background:#f0f6ff;border-radius:8px;padding:7px 10px;cursor:pointer}.preview-trigger:hover{background:#e3efff}.inline-preview{aspect-ratio:16/9;background:#07111f;border-radius:10px;overflow:hidden;margin:6px 0}.inline-preview iframe{width:100%;height:100%;border:0;display:block}.empty-state{display:none;border:1px dashed #b7c8df;border-radius:12px;text-align:center;padding:28px;color:var(--muted)}
-@media(max-width:850px){.page{grid-template-columns:1fr}.sidebar{position:static;max-height:none}.nav{width:100%}}@media(max-width:480px){.shell{width:min(100% - 20px,1200px)}.top{padding:13px 0}.nav a{font-size:.82rem;padding:5px 8px}main{padding:17px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#0b3e91}header{background:linear-gradient(120deg,#0d1e37,#173d6c);color:#fff}.shell{width:min(1200px,calc(100% - 32px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;flex-wrap:wrap}.brand{color:#fff;font-weight:850;letter-spacing:.05em;text-decoration:none}.nav{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.nav a,.nav-more summary{color:#eaf2ff;text-decoration:none;border:1px solid #ffffff42;border-radius:999px;padding:6px 11px;font-size:.88rem;font-weight:750;white-space:nowrap}.nav a:hover,.nav a.active,.nav-more summary:hover,.nav-more[open] summary{background:#ffffff1d;border-color:#ffffff82}.nav a.active{box-shadow:inset 0 0 0 1px #ffffff32}.nav-more{position:relative}.nav-more summary{cursor:pointer;list-style:none;user-select:none}.nav-more summary::-webkit-details-marker{display:none}.nav-dropdown{position:absolute;z-index:60;right:0;top:calc(100% + 8px);min-width:225px;display:grid;gap:4px;padding:8px;background:#fff;border:1px solid var(--line);border-radius:13px;box-shadow:var(--shadow)}.nav .nav-dropdown a{display:block;color:var(--text);border:0;border-radius:8px;padding:9px 11px;white-space:normal;font-size:.91rem}.nav .nav-dropdown a:hover,.nav .nav-dropdown a.active{background:var(--soft);color:var(--blue)}.skip-link{position:absolute;left:12px;top:-60px;z-index:1000;padding:10px 14px;background:#fff;color:var(--navy);border-radius:8px}.skip-link:focus{top:12px}.page-top-link{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.page-top-link a{font-weight:800;text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:8px 11px;background:#f8fbff}.hero{padding:25px 0 42px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#9dd8ff;font-weight:900}.hero h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.12;letter-spacing:-.04em;margin:.4em 0}.hero p{max-width:820px;color:#d8e6fa;font-size:1.08rem}.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #d5e3f5;background:#f5f9ff;color:#173e75;border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:850}.hero .badge{background:#183e69;color:#e5f2ff;border-color:#ffffff35}.page{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;padding:28px 0 56px}.sidebar{align-self:start;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow)}.sidebar h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 9px}.sidebar a{display:block;text-decoration:none;color:#22364e;padding:6px 8px;border-radius:8px;font-size:.91rem}.sidebar a:hover{background:var(--soft)}main{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,42px);box-shadow:var(--shadow)}main h1{line-height:1.16;letter-spacing:-.035em;font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:0}main h2{margin-top:1.9em;padding-bottom:.35em;border-bottom:1px solid var(--line);line-height:1.3}main h3{margin-top:1.5em;line-height:1.4}main h4{margin-top:1.4em}p,li{overflow-wrap:anywhere}img{max-width:100%;height:auto;border-radius:10px}blockquote{border-left:4px solid #79aef9;background:#f1f6ff;margin:1.4em 0;padding:.8em 1.2em;color:#324963;border-radius:0 10px 10px 0}pre{overflow:auto;background:#101d31;color:#e8f1ff;padding:16px;border-radius:12px;font-size:.9rem}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#edf2fa;padding:.12em .32em;border-radius:5px;font-size:.92em}pre code{background:transparent;padding:0;color:inherit}table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;font-size:.93rem}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:#eef4fc;font-weight:850}tr:nth-child(even) td{background:#fafcff}hr{border:0;border-top:1px solid var(--line);margin:2em 0}.toc{background:#f6f9fe;border:1px solid var(--line);border-radius:12px;padding:12px 16px}footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 36px;font-size:.9rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px #12203308}.card:hover{border-color:#8db9f7;box-shadow:var(--shadow);transform:translateY(-1px)}.card h2{border:0;margin:0 0 7px;padding:0;font-size:1.08rem}.card p{margin:.2em 0;color:var(--muted);font-size:.93rem}.section-label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900;margin:28px 0 12px}.callout{border:1px solid #bcd5fa;border-left:4px solid var(--blue);border-radius:10px;padding:13px 16px;background:#f1f7ff}.file-links{display:flex;gap:10px;flex-wrap:wrap}.file-link{display:inline-flex;padding:9px 13px;border:1px solid #bdd3f1;background:#f3f8ff;border-radius:9px;text-decoration:none;font-weight:800}
+.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:13px}.journey-step{display:flex;flex-direction:column;gap:9px;padding:17px;background:linear-gradient(145deg,#fff,#f7faff);border:1px solid var(--line);border-radius:15px;box-shadow:0 7px 22px #16365b08;min-height:194px}.journey-step:before{counter-increment:journey;content:counter(journey,decimal-leading-zero);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900}.journey-step h3{margin:0;font-size:1.05rem;line-height:1.35}.journey-step p{margin:0;color:var(--muted);font-size:.91rem}.journey-link{display:inline-flex;align-items:center;gap:6px;margin-top:auto;font-weight:850;text-decoration:none}.journey-rail{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin:16px 0}.journey-rail span{height:6px;border-radius:99px;background:linear-gradient(90deg,#165dca,#73b0fa)}.home-start{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.home-start .card{height:100%}.filter-panel{display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(2,minmax(160px,.8fr));gap:12px;background:#f7faff;border:1px solid var(--line);border-radius:14px;padding:15px;margin:16px 0}.filter-field label{display:block;font-size:.78rem;font-weight:850;color:var(--muted);margin-bottom:5px}.filter-field input,.filter-field select{width:100%;padding:11px 12px;border:1px solid #c8d6e9;border-radius:9px;background:#fff;color:var(--text);font:inherit}.resource-results{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin:14px 0}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:13px}.resource-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0;box-shadow:0 6px 20px #10213c07}.resource-card[hidden]{display:none}.resource-card h2,.resource-card h3{border:0;padding:0;margin:0;font-size:1.03rem;line-height:1.4}.community-catalog{margin-top:34px;padding-top:8px}.community-catalog>h2{margin-top:.4em}.community-catalog .resource-card h3{margin:.1em 0}.resource-action{align-items:center}.resource-card p{margin:0;color:var(--muted);font-size:.91rem}.resource-card .resource-meta{display:flex;gap:6px;flex-wrap:wrap}.resource-tag{display:inline-flex;align-items:center;background:#edf4ff;color:#244875;border:1px solid #d8e7fa;border-radius:999px;padding:3px 8px;font-size:.73rem;font-weight:850}.resource-tag.priority{background:#e8f8ee;border-color:#c2ecd1;color:#176645}.resource-tag.optional{background:#fff7e6;border-color:#f2dfb4;color:#80520c}.resource-card details{border-top:1px solid var(--line);padding-top:9px;font-size:.85rem;color:var(--muted)}.resource-card summary{cursor:pointer;font-weight:800;color:#284b77}.resource-action{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.resource-action a{font-weight:850;text-decoration:none}.preview-trigger{font:inherit;font-size:.86rem;font-weight:850;color:#164c91;border:1px solid #bdd3f1;background:#f0f6ff;border-radius:8px;padding:7px 10px;cursor:pointer}.preview-trigger:hover{background:#e3efff}.inline-preview{aspect-ratio:16/9;background:#07111f;border-radius:10px;overflow:hidden;margin:6px 0}.inline-preview iframe{width:100%;height:100%;border:0;display:block}.empty-state{display:none;border:1px dashed #b7c8df;border-radius:12px;text-align:center;padding:28px;color:var(--muted)}
+@media(max-width:850px){.page{grid-template-columns:1fr}.sidebar{position:static;max-height:none}.nav{width:100%}.nav-more{margin-left:auto}.nav-dropdown{right:0}.filter-panel{grid-template-columns:1fr 1fr}.filter-field:first-child{grid-column:1/-1}}@media(max-width:480px){.shell{width:min(100% - 20px,1200px)}.top{padding:13px 0}.nav{gap:5px}.nav>a,.nav-more summary{font-size:.78rem;padding:5px 8px}.nav-more{margin-left:0}.nav-dropdown{position:fixed;right:10px;left:10px;top:auto;min-width:0}.filter-panel{grid-template-columns:1fr}.filter-field:first-child{grid-column:auto}main{padding:17px}}
 """
 
 NAV_ITEMS = [
     ("Home", "index.html"),
     ("Guided roadmap", "ROADMAP.html"),
     ("Resource Explorer", "learning-resources.html"),
-    ("Resource guide", "docs/RESOURCES.html"),
-    ("Video gallery", "VIDEO_LIBRARY.html"),
-    ("Community resources", "docs/COMMUNITY_RESOURCES.html"),
+    ("Video library", "VIDEO_LIBRARY.html"),
+    ("Community guide", "docs/COMMUNITY_RESOURCES.html"),
+]
+MORE_NAV_ITEMS = [
     ("Companion roadmaps", "docs/REFERENCE_ROADMAPS.html"),
-    ("Capstone", "docs/CAPSTONE.html"),
+    ("Capstone project", "docs/CAPSTONE.html"),
     ("PDF materials", "docs/LEARNING_MATERIALS.html"),
+    ("Skills & technology map", "docs/SKILL_MAP.html"),
+    ("Practice projects", "docs/PROJECTS.html"),
 ]
 
 DOCS = [
@@ -96,19 +99,38 @@ def site_url(path: str) -> str:
     return (BASEURL + "/" + path.lstrip("/")).replace("//", "/") if BASEURL else "/" + path.lstrip("/")
 
 def page_shell(title: str, body: str, current: str = "") -> str:
-    nav = "".join(f'<a href="{site_url(url)}">{html.escape(label)}</a>' for label, url in NAV_ITEMS)
+    current_path = Path(current).with_suffix(".html").as_posix() if current else ""
+    nav = "".join(
+        f'<a class="{"active" if current_path == url else ""}" href="{site_url(url)}"'
+        f'{" aria-current=\"page\"" if current_path == url else ""}>{html.escape(label)}</a>'
+        for label, url in NAV_ITEMS
+    )
+    more_active = current_path in {url for _, url in MORE_NAV_ITEMS}
+    more_links = "".join(
+        f'<a class="{"active" if current_path == url else ""}" href="{site_url(url)}"'
+        f'{" aria-current=\"page\"" if current_path == url else ""}>{html.escape(label)}</a>'
+        for label, url in MORE_NAV_ITEMS
+    )
     sidebar = "".join(f'<a href="{site_url(Path(src).with_suffix(".html").as_posix())}">{html.escape(label)}</a>' for src, label in DOCS)
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10213c"><title>{html.escape(title)} | Data Engineering Learning Roadmap</title>
 <meta name="description" content="A practical, skill-first data engineering learning roadmap, resources, projects, and documentation.">
 <link rel="stylesheet" href="{site_url('assets/site.css')}"></head>
-<body><header><div class="shell"><div class="top"><a class="brand" href="{site_url('index.html')}">DATA ENGINEERING LEARNING ROADMAP</a><nav class="nav" aria-label="Primary navigation">{nav}</nav></div>
-<div class="hero"><div class="eyebrow">Learn · Practise · Build</div><h1>{html.escape(title)}</h1><p>Skill-first learning path with hands-on deliverables, curated resources, project documentation, and reusable study templates.</p>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<header><div class="shell"><div class="top"><a class="brand" href="{site_url('index.html')}">DATA ENGINEERING LEARNING ROADMAP</a><nav class="nav" aria-label="Primary navigation">{nav}<details class="nav-more{" active" if more_active else ""}"><summary aria-label="More pages">More <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown" aria-label="More pages">{more_links}</div></details></nav></div>
+<div class="hero"><div class="eyebrow">Learn · Practise · Build</div><h1>{html.escape(title)}</h1><p>One connected learning hub: follow the roadmap, discover resources, preview videos, and turn each topic into portfolio evidence.</p>
 <div class="badge-row"><span class="badge">Self-paced</span><span class="badge">{csv_count("video-resources.csv")} video resources</span><span class="badge">{csv_count("community-learning-resources.csv")} community resources</span><span class="badge">{csv_count("roadmap-references.csv")} roadmap references</span><span class="badge">Projects and practice</span></div></div></div></header>
-<div class="shell page"><aside class="sidebar"><h2>All documentation</h2>{sidebar}</aside><main>{body}</main></div>
+<div class="shell page"><aside class="sidebar"><h2>Explore the hub</h2><a href="{site_url('index.html')}">Home and learning path</a><a href="{site_url('ROADMAP.html')}">Step-by-step roadmap</a><a href="{site_url('learning-resources.html')}">All resource collections</a><a href="{site_url('VIDEO_LIBRARY.html')}">Video previews</a><a href="{site_url('docs/COMMUNITY_RESOURCES.html')}">Community learning resources</a><h2 style="margin-top:18px">All documentation</h2>{sidebar}</aside><main id="main-content" tabindex="-1"><div class="page-top-link"><a href="{site_url('index.html')}">← Hub home</a><a href="{site_url('learning-resources.html')}">Search all resources ↗</a><a href="{site_url('ROADMAP.html')}">Learning roadmap ↗</a></div>{body}</main></div>
 <footer><div class="shell">A practical learning guide. External tools and resources may change; verify access, licensing, and version-specific instructions on their official sites.
-<div class="file-links" style="margin-top:10px"><a class="file-link" href="{site_url('README.html')}">Repository README</a><a class="file-link" href="{site_url('data/video-resources.csv')}">Download video index CSV</a><a class="file-link" href="{site_url('data/roadmap-references.csv')}">Download references CSV</a><a class="file-link" href="https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap">GitHub repository</a></div></div></footer>
+<div class="file-links" style="margin-top:10px"><a class="file-link" href="{site_url('README.html')}">Repository README</a><a class="file-link" href="{site_url('data/community-learning-resources.csv')}">Download community CSV</a><a class="file-link" href="{site_url('data/video-resources.csv')}">Download video index CSV</a><a class="file-link" href="{site_url('data/roadmap-references.csv')}">Download references CSV</a><a class="file-link" href="https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap" target="_blank" rel="noopener noreferrer">GitHub repository ↗</a></div></div></footer>
+<script>
+document.addEventListener("click", function(event) {
+  document.querySelectorAll(".nav-more[open]").forEach(function(menu) {
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
+  });
+});
+</script>
 </body></html>"""
 
 def rewrite_links(document: str) -> str:
@@ -175,7 +197,7 @@ def classify_resource_type(fmt: str, url: str) -> str:
         return "Docs / article"
     return "Reference"
 
-def load_resource_rows() -> list[dict[str, str]]:
+def load_resource_rows(catalogs: tuple[str, ...] = ("community", "video", "references")) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
     seen: set[str] = set()
 
@@ -200,6 +222,8 @@ def load_resource_rows() -> list[dict[str, str]]:
         ("roadmap-references.csv", "references"),
     ]
     for filename, kind in sources:
+        if kind not in catalogs:
+            continue
         path = ROOT / "data" / filename
         if not path.exists():
             continue
@@ -322,6 +346,114 @@ def create_resource_explorer() -> str:
 """
     return page_shell("Resource Explorer", body, "learning-resources.html")
 
+
+def create_community_resource_section() -> str:
+    rows = load_resource_rows(("community",))
+    phases = sorted({row["phase"] for row in rows})
+    types = sorted({row["type"] for row in rows})
+    phase_options = "".join(f'<option value="{html.escape(p, quote=True)}">{html.escape(p)}</option>' for p in phases)
+    type_options = "".join(f'<option value="{html.escape(t, quote=True)}">{html.escape(t)}</option>' for t in types)
+    cards: list[str] = []
+    for row in rows:
+        query = " ".join([row["title"], row["skill"], row["format"], row["phase"],
+                          row["source"], row["access"], row["summary"], row["priority"]]).lower()
+        priority_class = "priority" if row["priority"].lower() == "core" else "optional"
+        preview_button = ""
+        if row.get("embed"):
+            preview_button = (
+                f'<button class="preview-trigger" type="button" data-embed="{html.escape(row["embed"], quote=True)}" '
+                f'aria-expanded="false" aria-label="Preview {html.escape(row["title"], quote=True)}">Preview here ▶</button>'
+            )
+        cards.append(
+            f'<article class="resource-card" data-phase="{html.escape(row["phase"], quote=True)}" '
+            f'data-type="{html.escape(row["type"], quote=True)}" data-search="{html.escape(query, quote=True)}">'
+            f'<div class="resource-meta"><span class="resource-tag">{html.escape(row["phase"])}</span>'
+            f'<span class="resource-tag">{html.escape(row["type"])}</span>'
+            f'<span class="resource-tag {priority_class}">{html.escape(row["priority"])}</span></div>'
+            f'<h3>{html.escape(row["title"])}</h3><p><strong>{html.escape(row["skill"])}</strong></p>'
+            f'<p>{html.escape(row["summary"])}</p>'
+            f'<details><summary>Source and access notes</summary>'
+            f'<p><strong>Source:</strong> {html.escape(row["source"])}</p>'
+            f'<p><strong>Format:</strong> {html.escape(row["format"])}</p>'
+            f'<p>{html.escape(row["access"])}</p></details>'
+            f'<div class="resource-action"><a href="{html.escape(row["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Open resource ↗</a>{preview_button}</div>'
+            '</article>'
+        )
+    return f"""
+<section class="community-catalog" aria-labelledby="community-catalog-title">
+  <div class="section-label">Explore the full community catalog</div>
+  <h2 id="community-catalog-title">Search, open, and preview resources</h2>
+  <p>Every card links directly to its original source. Video and playlist entries include an on-page preview; other resources open at their source. Filter the list instead of scrolling through the entire catalog.</p>
+  <div class="callout"><strong>Keep learning practical:</strong> choose one resource for your current phase, do the exercise, and save the result as evidence. Access and pricing notes are listed on each card when available.</div>
+  <div class="badge-row"><span class="badge">{len(rows)} community resources</span><span class="badge">{len(phases)} phases / tracks</span><a class="badge" href="{site_url('data/community-learning-resources.csv')}">Download CSV ↓</a><a class="badge" href="{site_url('learning-resources.html')}">Explore all resource collections ↗</a></div>
+  <div class="filter-panel">
+    <div class="filter-field"><label for="community-search">Search titles, skills, sources, or notes</label><input id="community-search" type="search" placeholder="Try SQL, Airflow, pandas, Kafka…" autocomplete="off"></div>
+    <div class="filter-field"><label for="community-phase-filter">Learning phase</label><select id="community-phase-filter"><option value="all">All phases</option>{phase_options}</select></div>
+    <div class="filter-field"><label for="community-type-filter">Resource type</label><select id="community-type-filter"><option value="all">All types</option>{type_options}</select></div>
+  </div>
+  <div class="resource-results"><span id="community-resource-count" aria-live="polite">Showing {len(rows)} resources</span><a href="{site_url('learning-resources.html')}">Open the combined Resource Explorer →</a></div>
+  <div class="resource-grid" id="community-resource-grid">{''.join(cards)}</div>
+  <div class="empty-state" id="community-resource-empty">No resources match those filters. Clear the search or choose “All phases” and “All types”.</div>
+</section>
+<script>
+(function () {
+  var search = document.getElementById("community-search");
+  var phase = document.getElementById("community-phase-filter");
+  var type = document.getElementById("community-type-filter");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#community-resource-grid .resource-card"));
+  var count = document.getElementById("community-resource-count");
+  var empty = document.getElementById("community-resource-empty");
+  if (!search || !phase || !type || !count || !empty) return;
+  function refresh() {
+    var term = search.value.trim().toLowerCase();
+    var wantedPhase = phase.value;
+    var wantedType = type.value;
+    var visible = 0;
+    cards.forEach(function (card) {
+      var textMatch = !term || card.getAttribute("data-search").indexOf(term) !== -1;
+      var phaseMatch = wantedPhase === "all" || card.getAttribute("data-phase") === wantedPhase;
+      var typeMatch = wantedType === "all" || card.getAttribute("data-type") === wantedType;
+      var show = textMatch && phaseMatch && typeMatch;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    count.textContent = "Showing " + visible + " of " + cards.length + " community resources";
+    empty.style.display = visible ? "none" : "block";
+  }
+  search.addEventListener("input", refresh);
+  phase.addEventListener("change", refresh);
+  type.addEventListener("change", refresh);
+  document.querySelectorAll("#community-resource-grid .preview-trigger").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var card = button.closest(".resource-card");
+      var preview = card.querySelector(".inline-preview");
+      if (preview) {
+        preview.remove();
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Preview here ▶";
+        return;
+      }
+      var frameBox = document.createElement("div");
+      frameBox.className = "inline-preview";
+      var frame = document.createElement("iframe");
+      frame.loading = "lazy";
+      frame.src = button.getAttribute("data-embed");
+      frame.title = "Video preview: " + card.querySelector("h3").textContent;
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      frame.allowFullscreen = true;
+      frameBox.appendChild(frame);
+      var actions = button.closest(".resource-action");
+      actions.parentNode.insertBefore(frameBox, actions);
+      button.setAttribute("aria-expanded", "true");
+      button.textContent = "Hide preview ✕";
+    });
+  });
+  refresh();
+})();
+</script>
+"""
+
 def create_home() -> str:
     groups = [
         ("Start here", ["README.md", "ROADMAP.md", "docs/SKILL_MAP.md"]),
@@ -410,6 +542,8 @@ def build() -> None:
         target.parent.mkdir(parents=True, exist_ok=True)
         parser = markdown.Markdown(extensions=EXTENSIONS, output_format="html5")
         body = rewrite_links(parser.convert(src.read_text(encoding="utf-8-sig")))
+        if rel.as_posix() == "docs/COMMUNITY_RESOURCES.md":
+            body += create_community_resource_section()
         title = dict(DOCS).get(rel.as_posix(), rel.stem.replace("_", " ").title())
         (target).write_text(page_shell(title, body, rel.as_posix()), encoding="utf-8")
 
