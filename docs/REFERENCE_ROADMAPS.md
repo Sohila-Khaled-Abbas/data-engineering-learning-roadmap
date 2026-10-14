@@ -1,6 +1,6 @@
 # Companion Roadmaps & External References
 
-[![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-9_sources-7c3aed?style=for-the-badge)](../data/roadmap-references.csv)
+[![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-11_sources-7c3aed?style=for-the-badge)](../data/roadmap-references.csv)
 [![Primary roadmap](https://img.shields.io/badge/primary_roadmap-this_repository-16a34a?style=for-the-badge)](../ROADMAP.md)
 
 Use this catalog to compare learning paths, discover additional projects, and find other ways to visualize the same skills. **This repository remains the primary plan**: follow its simplified phases instead of trying to complete every linked roadmap in parallel.
@@ -26,6 +26,14 @@ Use this catalog to compare learning paths, discover additional projects, and fi
 **Focus:** a broad data engineering roadmap plus a separate cloud data engineering roadmap and a guide that encourages learning concepts before chasing every product.
 
 **How to use it:** consult it when deciding which concepts are core and which tool alternatives are optional. Do not attempt to master every technology shown.
+
+### [Data Engineering Mentorship — Ahmed Shaaban / upstream Omar Ehab repository](https://github.com/ahmedshaaban1999/Data_Engineering_Mentorship)
+
+**Focus:** an organised set of learning resources, a flexible Level 1 timeline, SQL cheat sheets and practice tasks, data-modeling projects, and project briefs for Kafka and Spark.
+
+**How to use it:** the repository includes resources across Python, SQL, modeling, Docker, Spark, Hadoop/Hive, Airflow, Kafka, Linux, data quality, file formats and cloud. The curated items have been extracted into the [Community Learning Resources](COMMUNITY_RESOURCES.md) catalog and [community resource CSV](../data/community-learning-resources.csv).
+
+**Attribution / access:** the linked repository is a public fork of [OmarEhab007's upstream Data_Engineering_Mentorship project](https://github.com/OmarEhab007/Data_Engineering_Mentorship). This catalog links to third-party resources and project briefs; it does not copy the upstream repository's files. Some course providers, datasets, books and certification materials may require registration, subscription, purchase, or additional access checks.
 
 ## Interactive and community roadmaps
 
