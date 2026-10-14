@@ -292,16 +292,16 @@ def create_resource_explorer() -> str:
   search.addEventListener("input", refresh);
   phase.addEventListener("change", refresh);
   type.addEventListener("change", refresh);
-  document.querySelectorAll(".preview-trigger").forEach(function (button) {
-    button.addEventListener("click", function () {
+  document.querySelectorAll(".preview-trigger").forEach(function (button) {{
+    button.addEventListener("click", function () {{
       var card = button.closest(".resource-card");
       var preview = card.querySelector(".inline-preview");
-      if (preview) {
+      if (preview) {{
         preview.remove();
         button.setAttribute("aria-expanded", "false");
         button.textContent = "Preview here ▶";
         return;
-      }
+      }}
       var frameBox = document.createElement("div");
       frameBox.className = "inline-preview";
       var frame = document.createElement("iframe");
@@ -315,8 +315,8 @@ def create_resource_explorer() -> str:
       button.parentNode.insertBefore(frameBox, button);
       button.setAttribute("aria-expanded", "true");
       button.textContent = "Hide preview ✕";
-    });
-  });
+    }});
+  }});
 }})();
 </script>
 """
