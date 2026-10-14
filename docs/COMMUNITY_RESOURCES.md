@@ -12,7 +12,7 @@ This catalog brings together additional learning resources extracted from the li
 
 ## A guided route through these resources
 
-<details>
+<details markdown="1">
 <summary><strong>01 — SQL and database foundations</strong></summary>
 
 Start with one relational database and combine learning with query practice.
@@ -27,7 +27,7 @@ Start with one relational database and combine learning with query practice.
 **Deliverable:** a small schema, a set of tested queries, and explanations for joins, aggregates, CTEs, and window functions.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>02 — Python, pandas, and data preparation</strong></summary>
 
 Pick one structured course, then practise with a real dataset.
@@ -41,7 +41,7 @@ Pick one structured course, then practise with a real dataset.
 **Deliverable:** a reusable script that ingests, validates, cleans, and writes a dataset.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>03 — Data modeling and warehousing</strong></summary>
 
 Use a business process to practise grain, facts, dimensions and source-to-target mapping.
@@ -55,7 +55,7 @@ Use a business process to practise grain, facts, dimensions and source-to-target
 **Deliverable:** a documented star schema, data dictionary, and quality rules. Do not copy another model without explaining the grain and business purpose.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>04 — ETL, BI, and data quality</strong></summary>
 
 - [ETL and ELT in Python](https://app.datacamp.com/learn/courses/etl-and-elt-in-python) — Python pipeline concepts.
@@ -66,7 +66,7 @@ Use a business process to practise grain, facts, dimensions and source-to-target
 **Deliverable:** a pipeline with observable quality checks plus a BI report whose headline metrics reconcile with SQL.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>05 — Linux, Git, Docker, and automation</strong></summary>
 
 - [Atlassian Git tutorial](https://www.atlassian.com/git) — commits, branching, merging, and conflict resolution.
@@ -77,7 +77,7 @@ Use a business process to practise grain, facts, dimensions and source-to-target
 **Deliverable:** a version-controlled pipeline that can be run from written instructions and, where practical, from Docker.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>06 — Orchestration, streaming, and big data</strong></summary>
 
 - [Airflow tutorial for beginners](https://www.youtube.com/watch?v=K9AnJ9_ZAXE&list=PLwFJcsJ61oujAqYpMp1kdUBcPG0sE0QMT) and [Introduction to Apache Airflow in Python](https://app.datacamp.com/learn/courses/introduction-to-apache-airflow-in-python).
@@ -90,7 +90,7 @@ Use a business process to practise grain, facts, dimensions and source-to-target
 **Deliverable:** a small Spark transformation and a separate Kafka producer/consumer or Airflow DAG. Specialised cluster setup can wait until these concepts make sense.
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>07 — Cloud, Snowflake, and dbt electives</strong></summary>
 
 Choose only the track that matches your role or project. Some items below are paid or require accounts.

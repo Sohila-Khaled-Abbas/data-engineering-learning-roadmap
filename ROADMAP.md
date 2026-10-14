@@ -1,10 +1,10 @@
 # Step-by-Step Roadmap
 
-The route below is ordered by dependency: fundamentals first, then analytics, pipelines, engineering practices, distributed systems, electives, and a capstone.
+The route below is ordered end to end by dependency: fundamentals first, then analytics, pipelines, engineering practices, distributed systems, focused electives, and a portfolio capstone. On the hosted website, every phase also has directly hyperlinked recommendations from the merged catalog and a shortcut to the gallery filtered to that phase. Videos and playlists are embedded in the [Resource & Video Gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html); documentation, courses, practice platforms, datasets and project briefs link to their original websites.
 
 ## Quick video resource map
 
-Use the playlists as support material, not as a replacement for labs. Open the [searchable Resource Explorer](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/learning-resources.html) to filter 100 community resources, or open the [interactive YouTube gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for lazy-loaded playlist/video previews and search/filter controls. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv). Companion community roadmaps are catalogued in [`docs/REFERENCE_ROADMAPS.md`](docs/REFERENCE_ROADMAPS.md).
+Use the playlists as support material, not as a replacement for labs. Open the [searchable Resource Explorer](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/learning-resources.html) to filter 100 community resources, or open the [Resource & Video Gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for embedded playlist/video players, searchable resource cards, phase/type filters, and direct source links for all non-video resources. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv). Companion community roadmaps are catalogued in [`docs/REFERENCE_ROADMAPS.md`](docs/REFERENCE_ROADMAPS.md).
 
 | Phase | Recommended video resources |
 |---|---|
