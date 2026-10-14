@@ -9,6 +9,16 @@ Start with free, official documentation and focused practice. A paid course is o
 
 [![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
 
+[![Community learning catalog](https://img.shields.io/badge/community_catalog-100%20resources-2563eb?style=for-the-badge)](../data/community-learning-resources.csv)
+[![Resource Explorer](https://img.shields.io/badge/open-resource%20explorer-0f766e?style=for-the-badge)](../learning-resources.html)
+[![Companion roadmap references](https://img.shields.io/badge/companion_roadmaps-11_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
+
+## Expanded community learning catalog
+
+Additional links have been extracted from the companion roadmaps and the public [Data Engineering Mentorship repository](https://github.com/ahmedshaaban1999/Data_Engineering_Mentorship). They include SQL practice, Python and pandas courses, dimensional modeling references, ETL/BI tracks, shell and Docker courses, Spark/Hadoop/Kafka/Airflow resources, cloud/dbt electives, and project briefs with source datasets.
+
+**Start with the [Community Learning Resources guide](COMMUNITY_RESOURCES.md)** for a phase-by-phase selection, or open the [searchable Resource Explorer](../learning-resources.html) to filter the full [community resource CSV](../data/community-learning-resources.csv) by phase, type, title, skill, or source. The catalog preserves source attribution and flags paid or account-gated material when known. Verify current availability and pricing before enrolling.
+
 ## Curated video playlists and lessons
 
 These community video resources are organized by the phase where they are most useful. They supplement the step-by-step roadmap; they do not replace coding, SQL practice, lab work, or project evidence. The full machine-readable index is [`data/video-resources.csv`](../data/video-resources.csv).
