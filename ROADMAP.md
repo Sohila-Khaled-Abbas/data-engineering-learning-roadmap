@@ -4,7 +4,7 @@ The route below is ordered by dependency: fundamentals first, then analytics, pi
 
 ## Quick video resource map
 
-Use the playlists as support material, not as a replacement for labs. Open the [interactive YouTube gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for lazy-loaded playlist/video previews and search/filter controls. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv). Companion community roadmaps are catalogued in [`docs/REFERENCE_ROADMAPS.md`](docs/REFERENCE_ROADMAPS.md).
+Use the playlists as support material, not as a replacement for labs. Open the [searchable Resource Explorer](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/learning-resources.html) to filter 100 community resources, or open the [interactive YouTube gallery](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html) for lazy-loaded playlist/video previews and search/filter controls. The full catalog is in [`docs/RESOURCES.md`](docs/RESOURCES.md) and [`data/video-resources.csv`](data/video-resources.csv). Companion community roadmaps are catalogued in [`docs/REFERENCE_ROADMAPS.md`](docs/REFERENCE_ROADMAPS.md).
 
 | Phase | Recommended video resources |
 |---|---|
