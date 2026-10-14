@@ -8,6 +8,8 @@ This catalog brings together additional learning resources extracted from the li
 
 **Use the [searchable resource explorer](../learning-resources.html) to filter the full catalog** by phase, resource type, title, skill, or source. The downloadable index is [data/community-learning-resources.csv](../data/community-learning-resources.csv).
 
+> **Interactive catalog on this page:** after the topic guide, use search and phase/type filters to explore all community entries. Every resource card links to the original source in a new tab; YouTube resources also offer an on-page **Preview here** player. For one search across community links, curated videos, and companion roadmaps, open the [combined Resource Explorer](../learning-resources.html).
+
 ## A guided route through these resources
 
 <details>
