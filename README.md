@@ -3,7 +3,7 @@
 [![Roadmap](https://img.shields.io/badge/roadmap-skill--first-16a34a?style=for-the-badge)](ROADMAP.md)
 [![Video Library](https://img.shields.io/badge/YouTube-interactive%20video%20library-red?style=for-the-badge&logo=youtube)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/VIDEO_LIBRARY.html)
 [![Resource Index](https://img.shields.io/badge/resources-16%20curated%20videos-2563eb?style=for-the-badge)](data/video-resources.csv)
-[![Companion Roadmaps](https://img.shields.io/badge/companion_roadmaps-10_sources-7c3aed?style=for-the-badge)](docs/REFERENCE_ROADMAPS.md)
+[![Companion Roadmaps](https://img.shields.io/badge/companion_roadmaps-11_sources-7c3aed?style=for-the-badge)](docs/REFERENCE_ROADMAPS.md)
 [![GitHub](https://img.shields.io/badge/GitHub-open%20repository-181717?style=for-the-badge&logo=github)](https://github.com/Sohila-Khaled-Abbas/data-engineering-learning-roadmap)
 [![Full Docs Site](https://img.shields.io/badge/site-all%20docs%20published-0f766e?style=for-the-badge)](https://sohila-khaled-abbas.github.io/data-engineering-learning-roadmap/)
 
