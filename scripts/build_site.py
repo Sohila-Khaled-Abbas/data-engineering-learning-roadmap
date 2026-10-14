@@ -15,7 +15,7 @@ import os
 import re
 import shutil
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import parse_qs, quote, urlsplit
 
 import markdown
 
@@ -36,7 +36,7 @@ EXTENSIONS = ["tables", "fenced_code", "toc", "attr_list", "md_in_html", "sane_l
 STYLE = r"""
 :root{color-scheme:light;--bg:#f4f7fb;--surface:#fff;--text:#122033;--muted:#596a80;--line:#dce4ef;--blue:#165dca;--navy:#10213c;--soft:#eaf2ff;--green:#13795b;--shadow:0 16px 38px rgba(18,32,51,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:#0b3e91}header{background:linear-gradient(120deg,#0d1e37,#173d6c);color:#fff}.shell{width:min(1200px,calc(100% - 32px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;flex-wrap:wrap}.brand{color:#fff;font-weight:850;letter-spacing:.05em;text-decoration:none}.nav{display:flex;gap:8px;flex-wrap:wrap}.nav a{color:#eaf2ff;text-decoration:none;border:1px solid #ffffff42;border-radius:999px;padding:6px 11px;font-size:.9rem}.nav a:hover{background:#ffffff18}.hero{padding:25px 0 42px}.eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#9dd8ff;font-weight:900}.hero h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.12;letter-spacing:-.04em;margin:.4em 0}.hero p{max-width:820px;color:#d8e6fa;font-size:1.08rem}.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #d5e3f5;background:#f5f9ff;color:#173e75;border-radius:8px;padding:5px 9px;font-size:.78rem;font-weight:850}.hero .badge{background:#183e69;color:#e5f2ff;border-color:#ffffff35}.page{display:grid;grid-template-columns:250px minmax(0,1fr);gap:24px;padding:28px 0 56px}.sidebar{align-self:start;position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:var(--shadow)}.sidebar h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 9px}.sidebar a{display:block;text-decoration:none;color:#22364e;padding:6px 8px;border-radius:8px;font-size:.91rem}.sidebar a:hover{background:var(--soft)}main{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,4vw,42px);box-shadow:var(--shadow)}main h1{line-height:1.16;letter-spacing:-.035em;font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:0}main h2{margin-top:1.9em;padding-bottom:.35em;border-bottom:1px solid var(--line);line-height:1.3}main h3{margin-top:1.5em;line-height:1.4}main h4{margin-top:1.4em}p,li{overflow-wrap:anywhere}img{max-width:100%;height:auto;border-radius:10px}blockquote{border-left:4px solid #79aef9;background:#f1f6ff;margin:1.4em 0;padding:.8em 1.2em;color:#324963;border-radius:0 10px 10px 0}pre{overflow:auto;background:#101d31;color:#e8f1ff;padding:16px;border-radius:12px;font-size:.9rem}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:#edf2fa;padding:.12em .32em;border-radius:5px;font-size:.92em}pre code{background:transparent;padding:0;color:inherit}table{width:100%;border-collapse:collapse;display:block;overflow-x:auto;font-size:.93rem}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:#eef4fc;font-weight:850}tr:nth-child(even) td{background:#fafcff}hr{border:0;border-top:1px solid var(--line);margin:2em 0}.toc{background:#f6f9fe;border:1px solid var(--line);border-radius:12px;padding:12px 16px}footer{border-top:1px solid var(--line);color:var(--muted);padding:24px 0 36px;font-size:.9rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}.card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px #12203308}.card:hover{border-color:#8db9f7;box-shadow:var(--shadow);transform:translateY(-1px)}.card h2{border:0;margin:0 0 7px;padding:0;font-size:1.08rem}.card p{margin:.2em 0;color:var(--muted);font-size:.93rem}.section-label{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900;margin:28px 0 12px}.callout{border:1px solid #bcd5fa;border-left:4px solid var(--blue);border-radius:10px;padding:13px 16px;background:#f1f7ff}.file-links{display:flex;gap:10px;flex-wrap:wrap}.file-link{display:inline-flex;padding:9px 13px;border:1px solid #bdd3f1;background:#f3f8ff;border-radius:9px;text-decoration:none;font-weight:800}
-.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:13px}.journey-step{display:flex;flex-direction:column;gap:9px;padding:17px;background:linear-gradient(145deg,#fff,#f7faff);border:1px solid var(--line);border-radius:15px;box-shadow:0 7px 22px #16365b08;min-height:194px}.journey-step:before{counter-increment:journey;content:counter(journey,decimal-leading-zero);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900}.journey-step h3{margin:0;font-size:1.05rem;line-height:1.35}.journey-step p{margin:0;color:var(--muted);font-size:.91rem}.journey-link{display:inline-flex;align-items:center;gap:6px;margin-top:auto;font-weight:850;text-decoration:none}.journey-rail{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin:16px 0}.journey-rail span{height:6px;border-radius:99px;background:linear-gradient(90deg,#165dca,#73b0fa)}.home-start{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.home-start .card{height:100%}.filter-panel{display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(2,minmax(160px,.8fr));gap:12px;background:#f7faff;border:1px solid var(--line);border-radius:14px;padding:15px;margin:16px 0}.filter-field label{display:block;font-size:.78rem;font-weight:850;color:var(--muted);margin-bottom:5px}.filter-field input,.filter-field select{width:100%;padding:11px 12px;border:1px solid #c8d6e9;border-radius:9px;background:#fff;color:var(--text);font:inherit}.resource-results{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin:14px 0}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:13px}.resource-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0;box-shadow:0 6px 20px #10213c07}.resource-card[hidden]{display:none}.resource-card h2{border:0;padding:0;margin:0;font-size:1.03rem;line-height:1.4}.resource-card p{margin:0;color:var(--muted);font-size:.91rem}.resource-card .resource-meta{display:flex;gap:6px;flex-wrap:wrap}.resource-tag{display:inline-flex;align-items:center;background:#edf4ff;color:#244875;border:1px solid #d8e7fa;border-radius:999px;padding:3px 8px;font-size:.73rem;font-weight:850}.resource-tag.priority{background:#e8f8ee;border-color:#c2ecd1;color:#176645}.resource-tag.optional{background:#fff7e6;border-color:#f2dfb4;color:#80520c}.resource-card details{border-top:1px solid var(--line);padding-top:9px;font-size:.85rem;color:var(--muted)}.resource-card summary{cursor:pointer;font-weight:800;color:#284b77}.resource-action{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.resource-action a{font-weight:850;text-decoration:none}.empty-state{display:none;border:1px dashed #b7c8df;border-radius:12px;text-align:center;padding:28px;color:var(--muted)}
+.journey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:13px}.journey-step{display:flex;flex-direction:column;gap:9px;padding:17px;background:linear-gradient(145deg,#fff,#f7faff);border:1px solid var(--line);border-radius:15px;box-shadow:0 7px 22px #16365b08;min-height:194px}.journey-step:before{counter-increment:journey;content:counter(journey,decimal-leading-zero);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:900}.journey-step h3{margin:0;font-size:1.05rem;line-height:1.35}.journey-step p{margin:0;color:var(--muted);font-size:.91rem}.journey-link{display:inline-flex;align-items:center;gap:6px;margin-top:auto;font-weight:850;text-decoration:none}.journey-rail{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:5px;margin:16px 0}.journey-rail span{height:6px;border-radius:99px;background:linear-gradient(90deg,#165dca,#73b0fa)}.home-start{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.home-start .card{height:100%}.filter-panel{display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(2,minmax(160px,.8fr));gap:12px;background:#f7faff;border:1px solid var(--line);border-radius:14px;padding:15px;margin:16px 0}.filter-field label{display:block;font-size:.78rem;font-weight:850;color:var(--muted);margin-bottom:5px}.filter-field input,.filter-field select{width:100%;padding:11px 12px;border:1px solid #c8d6e9;border-radius:9px;background:#fff;color:var(--text);font:inherit}.resource-results{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin:14px 0}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:13px}.resource-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0;box-shadow:0 6px 20px #10213c07}.resource-card[hidden]{display:none}.resource-card h2{border:0;padding:0;margin:0;font-size:1.03rem;line-height:1.4}.resource-card p{margin:0;color:var(--muted);font-size:.91rem}.resource-card .resource-meta{display:flex;gap:6px;flex-wrap:wrap}.resource-tag{display:inline-flex;align-items:center;background:#edf4ff;color:#244875;border:1px solid #d8e7fa;border-radius:999px;padding:3px 8px;font-size:.73rem;font-weight:850}.resource-tag.priority{background:#e8f8ee;border-color:#c2ecd1;color:#176645}.resource-tag.optional{background:#fff7e6;border-color:#f2dfb4;color:#80520c}.resource-card details{border-top:1px solid var(--line);padding-top:9px;font-size:.85rem;color:var(--muted)}.resource-card summary{cursor:pointer;font-weight:800;color:#284b77}.resource-action{margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.resource-action a{font-weight:850;text-decoration:none}.preview-trigger{font:inherit;font-size:.86rem;font-weight:850;color:#164c91;border:1px solid #bdd3f1;background:#f0f6ff;border-radius:8px;padding:7px 10px;cursor:pointer}.preview-trigger:hover{background:#e3efff}.inline-preview{aspect-ratio:16/9;background:#07111f;border-radius:10px;overflow:hidden;margin:6px 0}.inline-preview iframe{width:100%;height:100%;border:0;display:block}.empty-state{display:none;border:1px dashed #b7c8df;border-radius:12px;text-align:center;padding:28px;color:var(--muted)}
 @media(max-width:850px){.page{grid-template-columns:1fr}.sidebar{position:static;max-height:none}.nav{width:100%}}@media(max-width:480px){.shell{width:min(100% - 20px,1200px)}.top{padding:13px 0}.nav a{font-size:.82rem;padding:5px 8px}main{padding:17px}}
 """
 
@@ -141,6 +141,26 @@ def normalise_phase(value: str) -> str:
             return label
     return text if text else "Additional resources"
 
+def youtube_embed_url(url: str) -> str:
+    try:
+        parsed = urlsplit(url)
+        params = parse_qs(parsed.query)
+        host = parsed.netloc.lower()
+        if "youtu.be" in host:
+            video_id = parsed.path.strip("/").split("/")[0]
+            return "https://www.youtube-nocookie.com/embed/" + video_id if video_id else ""
+        if "youtube.com" not in host:
+            return ""
+        playlist_id = params.get("list", [""])[0]
+        video_id = params.get("v", [""])[0]
+        if video_id:
+            return "https://www.youtube-nocookie.com/embed/" + video_id + (("?list=" + playlist_id) if playlist_id else "")
+        if "playlist" in parsed.path and playlist_id:
+            return "https://www.youtube-nocookie.com/embed/videoseries?list=" + playlist_id
+    except (ValueError, IndexError):
+        return ""
+    return ""
+
 def classify_resource_type(fmt: str, url: str) -> str:
     text = (fmt + " " + url).lower()
     if "youtube.com" in text or "youtu.be" in text or "playlist" in text or "video" in text:
@@ -169,7 +189,7 @@ def load_resource_rows() -> list[dict[str, str]]:
         rows.append({
             "title": title, "skill": skill or "General learning", "format": fmt or "Reference",
             "type": classify_resource_type(fmt, url), "phase": normalise_phase(phase),
-            "priority": priority or "Supplementary", "url": url, "source": source or "Community catalog",
+            "priority": priority or "Supplementary", "url": url, "embed": youtube_embed_url(url), "source": source or "Community catalog",
             "access": access or "Check source for current access and pricing.",
             "summary": summary or "Open the source resource and practise the related skill.",
         })
@@ -211,6 +231,12 @@ def create_resource_explorer() -> str:
         query = " ".join([row["title"], row["skill"], row["format"], row["phase"],
                           row["source"], row["access"], row["summary"], row["priority"]]).lower()
         priority_class = "priority" if row["priority"].lower() == "core" else "optional"
+        preview_button = ""
+        if row.get("embed"):
+            preview_button = (
+                f'<button class="preview-trigger" type="button" data-embed="{html.escape(row["embed"], quote=True)}" '
+                f'aria-expanded="false">Preview here ▶</button>'
+            )
         cards.append(
             f'<article class="resource-card" data-phase="{html.escape(row["phase"], quote=True)}" '
             f'data-type="{html.escape(row["type"], quote=True)}" data-search="{html.escape(query, quote=True)}">'
@@ -223,7 +249,7 @@ def create_resource_explorer() -> str:
             f'<p><strong>Source:</strong> {html.escape(row["source"])}</p>'
             f'<p><strong>Format:</strong> {html.escape(row["format"])}</p>'
             f'<p>{html.escape(row["access"])}</p></details>'
-            f'<div class="resource-action"><a href="{html.escape(row["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Open resource ↗</a></div>'
+            f'<div class="resource-action"><a href="{html.escape(row["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Open resource ↗</a>{preview_button}</div>'
             '</article>'
         )
     body = f"""
@@ -266,6 +292,31 @@ def create_resource_explorer() -> str:
   search.addEventListener("input", refresh);
   phase.addEventListener("change", refresh);
   type.addEventListener("change", refresh);
+  document.querySelectorAll(".preview-trigger").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var card = button.closest(".resource-card");
+      var preview = card.querySelector(".inline-preview");
+      if (preview) {
+        preview.remove();
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "Preview here ▶";
+        return;
+      }
+      var frameBox = document.createElement("div");
+      frameBox.className = "inline-preview";
+      var frame = document.createElement("iframe");
+      frame.loading = "lazy";
+      frame.src = button.getAttribute("data-embed");
+      frame.title = "YouTube preview: " + card.querySelector("h2").textContent;
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.referrerPolicy = "strict-origin-when-cross-origin";
+      frame.allowFullscreen = true;
+      frameBox.appendChild(frame);
+      button.parentNode.insertBefore(frameBox, button);
+      button.setAttribute("aria-expanded", "true");
+      button.textContent = "Hide preview ✕";
+    });
+  });
 }})();
 </script>
 """
