@@ -1,16 +1,13 @@
 name: Build and deploy full documentation site
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "*.md"
-      - "docs/**"
-      - "data/**"
-      - "templates/**"
-      - "scripts/**"
-      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
+    inputs:
+      public_release_approved:
+        description: "I approve publishing this version publicly on GitHub Pages"
+        type: boolean
+        required: true
+        default: false
 
 permissions:
   contents: read
@@ -23,6 +20,7 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ inputs.public_release_approved }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -38,13 +36,13 @@ jobs:
 
       - name: Generate complete documentation site
         env:
-          PAGES_BASEURL: /data-engineering-learning-roadmap
-        run: python scripts/build_site.py
+          NAVIGATOR_BASEURL: /data-engineering-learning-roadmap
+        run: python scripts/build_navigator.py
 
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: _site
+          path: dist
 
   deploy:
     needs: build
@@ -59,3 +57,4 @@ jobs:
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+

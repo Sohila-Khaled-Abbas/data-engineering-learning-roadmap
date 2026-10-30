@@ -1,0 +1,1 @@
+{"name":"sohila-learning-navigator","version":"1.0.0","private":true,"scripts":{"build":"python3 scripts/build_navigator.py","check":"python3 -m unittest discover -s tests && node --check web/navigator.js"}}
