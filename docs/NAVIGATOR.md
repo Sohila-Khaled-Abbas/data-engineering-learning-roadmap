@@ -1,6 +1,6 @@
 # Learning navigator
 
-The interactive entry point is built from the existing roadmap and resource catalogs. All original catalog URLs remain available. The source documentation is served under `guides/`; historical video and resource entry points redirect to the library.
+The interactive entry point is built from the existing roadmap and resource catalogs. All original catalog URLs remain available. All 19 guides and templates are rendered with the shared Learning Studio design under `guides/`. The documentation hub includes search and the five original CSV downloads. Historical Pages URLs redirect to corresponding unified pages; video and resource entry points lead to the same resource library.
 
 ## Use it
 

@@ -5,7 +5,7 @@ Start with free, official documentation and focused practice. A paid course is o
 [![Curated videos](https://img.shields.io/badge/video_library-16_resources-red?style=for-the-badge&logo=youtube)](../data/video-resources.csv)
 [![Step-by-step roadmap](https://img.shields.io/badge/learning_order-step_by_step-2563eb?style=for-the-badge)](../ROADMAP.md)
 
-> **Interactive previews:** [Open the HTML video gallery](VIDEO_LIBRARY.html). The gallery uses YouTube iframes for playlists and individual lessons. GitHub sanitizes iframe embeds in Markdown, so the interactive gallery must be served by GitHub Pages to render as a player. See [`PAGES_SETUP.md`](PAGES_SETUP.md) for the one-time GitHub Pages setting.
+> **Interactive previews:** [Open the HTML video gallery](VIDEO_LIBRARY.html). The gallery uses YouTube iframes for playlists and individual lessons. GitHub sanitizes iframe embeds in Markdown. The unified website renders the same videos on Vercel, Sites, or GitHub Pages, with original source links as a fallback. See [`PAGES_SETUP.md`](PAGES_SETUP.md) for the one-time GitHub Pages setting.
 
 [![Companion roadmaps](https://img.shields.io/badge/companion_roadmaps-11_sources-7c3aed?style=for-the-badge)](REFERENCE_ROADMAPS.md)
 
@@ -112,3 +112,4 @@ These community video resources are organized by the phase where they are most u
 6. Mark the relevant phase complete only when you can explain the concept and reproduce the task.
 
 **Link/access note:** video titles, playlists, software access, documentation paths, free tiers and exam requirements may change. Check the source page before relying on a resource. Some system administration exercises require a disposable VM; avoid destructive experiments on your main computer. Specialized or legacy platforms can be learned conceptually first if a compatible lab is unavailable.
+

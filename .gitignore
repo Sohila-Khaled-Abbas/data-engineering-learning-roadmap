@@ -30,3 +30,5 @@ temp/
 dist/
 __pycache__/
 *.pyc
+
+_site/

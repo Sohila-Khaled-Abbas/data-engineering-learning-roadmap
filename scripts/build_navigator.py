@@ -9,6 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
+from style_guides import style_guides
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -98,6 +99,13 @@ def build():
     # Preserve recognizable historical entry points while making the navigator primary.
     for name in ['VIDEO_LIBRARY.html','learning-resources.html']:
         (out/name).write_text('<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./?view=library"><a href="./?view=library">Open the resource library</a>')
+    style_guides(ROOT,out,data)
+    if os.environ.get('PUBLIC_RELEASE_APPROVED')=='true':
+        p=out/'index.html';p.write_text(p.read_text().replace('noindex,nofollow','index,follow'))
+    public=os.environ.get('PUBLIC_RELEASE_APPROVED')=='true'
+    (out/'robots.txt').write_text('User-agent: *\n'+('Allow: /' if public else 'Disallow: /')+'\nSitemap: https://data-engineering-learning-roadmap.vercel.app/sitemap.xml\n')
+    pages=['']+['guides/']+['guides/'+str(p.relative_to(out/'guides')) for p in (out/'guides').rglob('*.html') if p.name not in ['index.html','VIDEO_LIBRARY.html','learning-resources.html']]
+    (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://data-engineering-learning-roadmap.vercel.app/'+p+'</loc></url>' for p in pages)+'</urlset>')
     print(f"Built {len(data['stages'])} stages and {len(data['resources'])} unique resources.")
 
 if __name__=='__main__': build()

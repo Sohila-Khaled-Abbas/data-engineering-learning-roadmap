@@ -1,6 +1,6 @@
-# Data Engineering Learning Navigator
+# Data Engineering Learning Roadmap
 
-A practical learning website by Sohila Khaled Abbas: 12 stages, original resource links, embedded YouTube lessons, SQL practice, networking, OS, databases, analytics engineering and end-to-end project work.
+One unified learning website by Sohila Khaled Abbas: the complete GitHub Pages content in a shared new design, 19 guides and templates, 12 stages, original resource links, embedded YouTube lessons, SQL practice, networking, OS, databases, analytics engineering and end-to-end project work.
 
 ## Start learning
 
@@ -16,10 +16,10 @@ Progress is local to each browser and origin. Export/import a backup to move it 
 
 The repository source is updated. The deployed website is still under private review; GitHub Pages automatic publishing is paused. Public website rollout and the portfolio production embed require the owner's approval.
 
-- Private Sites review: https://sohila-learning-navigator.supertiger512.chatgpt.site
-- Updated website: [Open the learning navigator on Vercel](https://sohila-learning-navigator.vercel.app/) — protected by Vercel Authentication.
-- Direct deployment: https://sohila-learning-navigator-d8ur216fo.vercel.app/
-- Vercel project: `sohila-learning-navigator`, authentication enabled for all deployments.
+- Private Sites review: https://data-engineering-learning-roadmap.supertiger512.chatgpt.site
+- Updated website: [Open the learning navigator on Vercel](https://data-engineering-learning-roadmap.vercel.app/) — protected by Vercel Authentication.
+- Vercel project: `data-engineering-learning-roadmap`, authentication enabled for all deployments.
+- Full guides hub: [Guides, templates & downloads](https://data-engineering-learning-roadmap.vercel.app/guides/)
 - Portfolio integration review: `portfolio-preview/` in either private deployment.
 
 ## Build and validate

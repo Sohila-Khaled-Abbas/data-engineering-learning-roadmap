@@ -37,6 +37,7 @@ jobs:
       - name: Generate complete documentation site
         env:
           NAVIGATOR_BASEURL: /data-engineering-learning-roadmap
+          PUBLIC_RELEASE_APPROVED: "true"
         run: python scripts/build_navigator.py
 
       - name: Upload static site artifact
