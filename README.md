@@ -2,6 +2,10 @@
 
 One unified learning website by Sohila Khaled Abbas: the complete GitHub Pages content in a shared new design, 19 guides and templates, 12 stages, original resource links, embedded YouTube lessons, SQL practice, networking, OS, databases, analytics engineering and end-to-end project work.
 
+## Python deep dive
+
+[**Python Learning Roadmap**](https://sohila-khaled-abbas.github.io/python-learning-roadmap/) expands Phase 2 into thirty topics: the Boot.dev course’s twelve chapters, ITI Arabic explanations, Harvard CS50P practice, original exercises and three data project briefs. It connects back to this parent path and to the FDE roadmap. [Source repository](https://github.com/Sohila-Khaled-Abbas/python-learning-roadmap).
+
 ## Start learning
 
 1. Choose a stage and read its practice task and evidence checklist.
@@ -48,3 +52,4 @@ Serve `dist/` with any static server. The build uses the repository CSVs and Mar
 The recognizable resource catalogs, detailed roadmap, contributor guide, license, learning templates and original documentation remain intact. Duplicate conflict-marker blocks in the roadmap and technology CSVs were resolved without dropping rows.
 
 Read the [full roadmap](ROADMAP.md), [resource guide](docs/RESOURCES.md), [capstone brief](docs/CAPSTONE.md), or the [previous repository guide](docs/REPOSITORY_GUIDE.md).
+

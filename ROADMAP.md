@@ -50,6 +50,8 @@ Use the playlists as support material, not as a replacement for labs. Open the [
 
 ## Phase 2 — Python for data work
 
+For a focused branch, open the [Python Learning Roadmap](https://sohila-khaled-abbas.github.io/python-learning-roadmap/): Boot.dev chapter links, your ITI Arabic playlist, Harvard CS50P, original data-work exercises, and an evidence-based twelve-week plan. Return here for the wider data engineering stages.
+
 **Suggested time:** 3 weeks  
 **Tools:** Python, pandas, requests, Jupyter or VS Code, pytest  
 **Skills:** functions, collections, modules, files, CSV/JSON, exceptions, logging, data types, joins/aggregations with pandas, HTTP requests, testing.
@@ -190,3 +192,4 @@ Build one end-to-end project that has a real question, repeatable ingestion, qua
 ## Career skills — practice throughout
 
 Keep notes readable, use issue trackers and pull requests, write status updates, explain decisions, practice short demos, and maintain a role-focused CV. At the end, rehearse a 5–7 minute capstone presentation and a technical interview walk-through.
+
