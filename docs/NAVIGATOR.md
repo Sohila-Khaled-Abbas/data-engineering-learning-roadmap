@@ -8,7 +8,7 @@ Choose a stage from the path. Read its practice task and required evidence. Sear
 
 Mark a stage complete when you can explain it, complete the lab, and save reproducible evidence. Resume opens the earliest incomplete core stage. Stage 9 is an elective and does not block the capstone or career stage. Completion is self-reported, not a certification.
 
-Progress and bookmarks use localStorage on the current origin/browser. Export/import a JSON backup to transfer them between the private Site, Vercel or portfolio. Imported IDs and stage numbers are validated before replacing progress. No server account or cloud progress sync is used.
+Progress and bookmarks use localStorage on the current origin/browser. Export/import a JSON backup to transfer them between Vercel deployments or a portfolio-hosted copy. Imported IDs and stage numbers are validated before replacing progress. No server account or cloud progress sync is used.
 
 ## Content and maintenance
 
@@ -31,10 +31,12 @@ npm run build
 
 The build emits `dist/`, including the original documentation under `guides/`. For a subdirectory, set `NAVIGATOR_BASEURL=/learning-navigator` before building. Vercel deploys the already-built `dist/`; the checked-in configuration intentionally runs no remote build or install.
 
-## Release boundaries
+## Public deployment and release boundaries
 
-This version is under private review. The owner approved updating the public GitHub source. GitHub Pages automatic publishing is paused, and the public portfolio remains unchanged until website-release approval. Do not deploy the portfolio production branch or change website audience before that approval. The private Vercel project requires Vercel Authentication on every deployment.
+Vercel is the intended public hosting target for this navigator. Build the static `dist/` directory and deploy it through the project's Vercel configuration. Verify the published URL is accessible without sign-in and the generated site loads before announcing it publicly; that access check has not been completed as part of this documentation edit.
+
+The GitHub Pages workflow is a separate, manually approved legacy/optional publishing route. Its presence does not mean Pages is the canonical website. Portfolio integration can use the same generated static files and should be tested on a preview branch before production changes.
 
 ## Portfolio integration
 
-The prepared `integration/portfolio-site/` files update the existing portfolio's `/learn/` page to embed the navigator at `/learning-navigator/`. Copy the navigator's prebuilt dist into `portfolio-site/learning-navigator-dist/`; the modified build script copies it to output. Same-origin embedding avoids third-party authentication/cookie issues. The private `portfolio-preview/` page demonstrates the integration with the current portfolio styling.
+The prepared `integration/portfolio-site/` files update the existing portfolio's `/learn/` page to embed the navigator at `/learning-navigator/`. Copy the navigator's prebuilt dist into `portfolio-site/learning-navigator-dist/`; the modified build script copies it to output. Same-origin embedding avoids third-party authentication/cookie issues. The `portfolio-preview/` directory demonstrates the integration with current portfolio styling; do not present this local preview as a separately published website.
