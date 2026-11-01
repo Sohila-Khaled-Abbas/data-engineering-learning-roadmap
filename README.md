@@ -16,15 +16,16 @@ One unified learning website by Sohila Khaled Abbas: the complete GitHub Pages c
 
 Progress is local to each browser and origin. Export/import a backup to move it between deployments.
 
-## Current release
+## Public deployment
 
-The repository source is updated. The deployed website is still under private review; GitHub Pages automatic publishing is paused. Public website rollout and the portfolio production embed require the owner's approval.
+The supported public deployment target is **Vercel**, built from the generated `dist/` static site.
 
-- Private Sites review: https://data-engineering-learning-roadmap.supertiger512.chatgpt.site
-- Updated website: [Open the learning navigator on Vercel](https://data-engineering-learning-roadmap.vercel.app/) — protected by Vercel Authentication.
-- Vercel project: `data-engineering-learning-roadmap`, authentication enabled for all deployments.
-- Full guides hub: [Guides, templates & downloads](https://data-engineering-learning-roadmap.vercel.app/guides/)
-- Portfolio integration review: `portfolio-preview/` in either private deployment.
+- **Website:** [Data Engineering Learning Roadmap on Vercel](https://data-engineering-learning-roadmap.vercel.app/)
+- **Learning guides:** [Guides, templates and downloads](https://data-engineering-learning-roadmap.vercel.app/guides/)
+- **Source:** This repository is the canonical source for the curriculum, catalog and website.
+- **Deployment note:** The domain and build configuration are documented here; public accessibility and any authentication settings must be checked in Vercel before announcing a release. This README does not claim a live verification.
+
+The optional GitHub Pages workflow remains **manual** with an explicit approval input; it is not the canonical Vercel publication path. For portfolio integration, use the reusable site assets in `integration/portfolio-site/` and follow [navigator engineering notes](docs/NAVIGATOR.md).
 
 ## Build and validate
 
